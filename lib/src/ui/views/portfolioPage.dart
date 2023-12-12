@@ -3,10 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:quickmarket/src/ui/widgets/footerWidget.dart';
 import 'package:quickmarket/src/ui/widgets/hoverWidget.dart';
 import 'package:quickmarket/src/utils/config/commonscafold.dart';
-import 'package:quickmarket/src/utils/config/uidata.dart';
 import 'package:get/get.dart';
-import 'package:quickmarket/src/utils/routes/app_routes.dart';
-import 'package:quickmarket/src/controllers/home.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../widgets/tab/ReusableTabWithFilterList.dart';
 
