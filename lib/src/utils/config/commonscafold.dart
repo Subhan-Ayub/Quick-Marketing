@@ -193,12 +193,17 @@ class CommonScafold extends StatelessWidget {
                     onExit: (event) {
                       _.check.value = '';
                     },
-                    child: Obx(() => Text('Contact Us',
-                        style: TextStyle(
-                            fontSize: 17,
-                            color: _.check.value == 'Contact'
-                                ? const Color.fromARGB(255, 255, 176, 0)
-                                : Colors.white)))),
+                    child: Obx(() => InkWell(
+                      onTap: () {
+                        Get.toNamed(Routes.contactUs);
+                      },
+                      child: Text('Contact Us',
+                          style: TextStyle(
+                              fontSize: 17,
+                              color: _.check.value == 'Contact'
+                                  ? const Color.fromARGB(255, 255, 176, 0)
+                                  : Colors.white)),
+                    ))),
               ],
             );
           })).marginOnly(left: Get.width / 2.3, top: 35);

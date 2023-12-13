@@ -28,4 +28,6 @@ abstract class Routes {
   static const socialmediamarketing = '/socialmediamarketing';
   static const graphicdesign = '/graphicdesign';
   static const videoediting = '/videoediting';
+  static const contactUs = '/contactus';
+
 }

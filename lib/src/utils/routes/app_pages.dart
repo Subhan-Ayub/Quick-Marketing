@@ -2,6 +2,7 @@ import 'package:quickmarket/src/bindings/about_bindings.dart';
 import 'package:quickmarket/src/bindings/portfolioBinding.dart';
 import 'package:quickmarket/src/bindings/servicesbinding.dart';
 import 'package:quickmarket/src/ui/views/aboutUs.dart';
+import 'package:quickmarket/src/ui/views/contact.dart';
 import 'package:quickmarket/src/ui/views/portfolioPage.dart';
 import 'package:quickmarket/src/ui/views/service/appDevelopment.dart';
 import 'package:quickmarket/src/ui/views/service/graphichdesign.dart';
@@ -80,6 +81,10 @@ class AppPages {
         name: Routes.videoediting,
         binding: ServicesBinding(),
         page: () => VideoEditing(),
+        transition: Transition.noTransition),
+         GetPage(
+        name: Routes.contactUs,
+        page: () => ContactUs(),
         transition: Transition.noTransition),
   ];
 }
