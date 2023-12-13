@@ -1,6 +1,5 @@
 import 'package:quickmarket/src/bindings/about_bindings.dart';
 import 'package:quickmarket/src/bindings/portfolioBinding.dart';
-import 'package:quickmarket/src/bindings/servicesbinding.dart';
 import 'package:quickmarket/src/ui/views/aboutUs.dart';
 import 'package:quickmarket/src/ui/views/contact.dart';
 import 'package:quickmarket/src/ui/views/portfolioPage.dart';
@@ -14,8 +13,11 @@ import 'package:get/get.dart';
 
 // bindings
 import 'package:quickmarket/src/bindings/home_bindings.dart';
+import 'package:quickmarket/src/bindings/servicesBinding.dart';
+
 
 // routes
+import '../../ui/views/plansPage.dart';
 import '../../ui/views/service/seo.dart';
 import '../../ui/views/service/videoEditing.dart';
 import './app_routes.dart';
@@ -34,17 +36,17 @@ class AppPages {
         transition: Transition.noTransition),
     GetPage(
         name: Routes.services,
-        binding: ServicesBinding(),
+        binding: ServicesBindings(),
         page: () => Services(),
         transition: Transition.noTransition),
     GetPage(
         name: Routes.webdevelopment,
-        binding: ServicesBinding(),
+        binding: ServicesBindings(),
         page: () => WebDevelopmentService(),
         transition: Transition.noTransition),
     GetPage(
         name: Routes.marketing,
-        binding: ServicesBinding(),
+        binding: ServicesBindings(),
         page: () => MarketingService(),
         transition: Transition.noTransition),
     GetPage(
@@ -57,29 +59,35 @@ class AppPages {
         binding: PortfolioBindings(),
         page: () => PortfolioScreen(),
         transition: Transition.noTransition),
+           GetPage(
+      name: Routes.plans,
+      binding: PortfolioBindings(),
+      page: () => PlanScreen(),
+      transition: Transition.noTransition
+    ),
     GetPage(
         name: Routes.appdevelopment,
-        binding: ServicesBinding(),
+        binding: ServicesBindings(),
         page: () => AppDevelopment(),
         transition: Transition.noTransition),
     GetPage(
         name: Routes.seoservice,
-        binding: ServicesBinding(),
+        binding: ServicesBindings(),
         page: () => SeoService(),
         transition: Transition.noTransition),
     GetPage(
         name: Routes.socialmediamarketing,
-        binding: ServicesBinding(),
+        binding: ServicesBindings(),
         page: () => SocialMediaMarketing(),
         transition: Transition.noTransition),
     GetPage(
         name: Routes.graphicdesign,
-        binding: ServicesBinding(),
+        binding: ServicesBindings(),
         page: () => GraphicDesign(),
         transition: Transition.noTransition),
     GetPage(
         name: Routes.videoediting,
-        binding: ServicesBinding(),
+        binding: ServicesBindings(),
         page: () => VideoEditing(),
         transition: Transition.noTransition),
          GetPage(

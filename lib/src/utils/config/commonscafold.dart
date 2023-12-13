@@ -129,12 +129,17 @@ class CommonScafold extends StatelessWidget {
                   child: Obx(() => Container(
                         height: Get.height,
                         alignment: Alignment.topCenter,
-                        child: Text('Plans',
-                            style: TextStyle(
-                                fontSize: 17,
-                                color: _.check.value == 'Plans'
-                                    ? const Color.fromARGB(255, 255, 176, 0)
-                                    : Colors.white)),
+                        child: InkWell(
+                            onTap: () {
+                          Get.toNamed(Routes.plans);
+                        },
+                          child: Text('Plans',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: _.check.value == 'Plans'
+                                      ? const Color.fromARGB(255, 255, 176, 0)
+                                      : Colors.white)),
+                        ),
                       )),
                 ),
                 MouseRegion(

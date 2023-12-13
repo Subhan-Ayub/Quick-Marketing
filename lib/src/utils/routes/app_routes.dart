@@ -16,6 +16,10 @@ abstract class Routes {
   //edit
   static const editRoute = '/edit';
 
+  //Plans
+    static const plans = '/plans';
+
+
   // splash
   static const splashRoute = '/splash';
   static const services = '/services';

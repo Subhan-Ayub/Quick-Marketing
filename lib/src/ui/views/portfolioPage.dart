@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:quickmarket/src/ui/widgets/footerWidget.dart';
-import 'package:quickmarket/src/ui/widgets/hoverWidget.dart';
-import 'package:quickmarket/src/utils/config/commonscafold.dart';
+
 import 'package:get/get.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:quickmarket/src/ui/widgets/hoverWidget.dart';
+import '../../utils/config/commonscafold.dart';
+import '../widgets/footerWidget.dart';
 import '../widgets/tab/ReusableTabWithFilterList.dart';
 
 class PortfolioScreen extends StatelessWidget {
@@ -16,14 +19,13 @@ class PortfolioScreen extends StatelessWidget {
       // key: key,
 
       body: SingleChildScrollView(
-        child: Stack(
+        child: Column(
           children: [
             Column(
               children: [
                 Container(
                   color: const Color.fromARGB(255, 255, 255, 255),
-                  child: Image.asset(
-                      "images/portfolioAssets/Portfolio.jpg"),
+                  child: Image.asset("images/portfolioAssets/Portfolio.jpg"),
                 ),
                 SafeArea(
                   minimum:

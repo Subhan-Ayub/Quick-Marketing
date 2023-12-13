@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 import '../controllers/servicesController.dart';
 
-class ServicesBinding extends Bindings {
+class ServicesBindings extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<ServicesController>(() => ServicesController());
