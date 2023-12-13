@@ -23,7 +23,7 @@ class PortfolioScreen extends StatelessWidget {
                 Container(
                   color: const Color.fromARGB(255, 255, 255, 255),
                   child: Image.asset(
-                      "assets/images/portfolioAssets/Portfolio.jpg"),
+                      "images/portfolioAssets/Portfolio.jpg"),
                 ),
                 SafeArea(
                   minimum:
@@ -50,7 +50,7 @@ class PortfolioScreen extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SvgPicture.asset(
-                                    "assets/images/portfolioAssets/www.svg",
+                                    "images/portfolioAssets/www.svg",
                                     width: Get.width / 30,
                                   ),
                                   Text(
@@ -67,7 +67,7 @@ class PortfolioScreen extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SvgPicture.asset(
-                                    "assets/images/portfolioAssets/digital-marketing.svg",
+                                    "images/portfolioAssets/digital-marketing.svg",
                                     width: Get.width / 30,
                                   ),
                                   Text(
@@ -84,7 +84,7 @@ class PortfolioScreen extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SvgPicture.asset(
-                                    "assets/images/portfolioAssets/photo-camera.svg",
+                                    "images/portfolioAssets/photo-camera.svg",
                                   ),
                                   Text(
                                     "Product Photography",
@@ -112,7 +112,7 @@ class PortfolioScreen extends StatelessWidget {
                                 return Container(
                                   // height: Get.height / 9,
                                   child: Image.asset(
-                                    "assets/images/portfolioAssets/tab-1-1.png",
+                                    "images/portfolioAssets/tab-1-1.png",
                                     fit: BoxFit.fitWidth,
                                   ),
                                 );
@@ -162,7 +162,7 @@ class PortfolioScreen extends StatelessWidget {
                                             topRight: Radius.circular(10),
                                           ),
                                           child: Image.asset(
-                                            "assets/images/portfolioAssets/customer6.png",
+                                            "images/portfolioAssets/customer6.png",
                                             height: 100,
                                             width: 120,
                                             fit: BoxFit.fill,
@@ -193,14 +193,14 @@ class PortfolioScreen extends StatelessWidget {
                                               width: Get.height / 30,
                                             ),
                                             Image.asset(
-                                              "assets/images/portfolioAssets/insta.png",
+                                              "images/portfolioAssets/insta.png",
                                               width: Get.width / 35,
                                             ),
                                             SizedBox(
                                               width: Get.height / 30,
                                             ),
                                             SvgPicture.asset(
-                                              "assets/images/portfolioAssets/www.svg",
+                                              "images/portfolioAssets/www.svg",
                                               width: Get.width / 52,
                                             ),
                                           ],
@@ -271,7 +271,7 @@ class PortfolioScreen extends StatelessWidget {
                               image: DecorationImage(
                                 // alignment: Alignment.centerRight,
                                 image: AssetImage(
-                                  "assets/images/portfolioAssets/customer1.png",
+                                  "images/portfolioAssets/customer1.png",
                                 ),
                                 fit: BoxFit.fitWidth,
                               ),
@@ -287,7 +287,7 @@ class PortfolioScreen extends StatelessWidget {
                               image: DecorationImage(
                                 // alignment: Alignment.centerRight,
                                 image: AssetImage(
-                                  "assets/images/portfolioAssets/customer2.png",
+                                  "images/portfolioAssets/customer2.png",
                                 ),
                                 fit: BoxFit.fitWidth,
                               ),
@@ -303,7 +303,7 @@ class PortfolioScreen extends StatelessWidget {
                               image: DecorationImage(
                                 // alignment: Alignment.centerRight,
                                 image: AssetImage(
-                                  "assets/images/portfolioAssets/customer3.png",
+                                  "images/portfolioAssets/customer3.png",
                                 ),
                                 fit: BoxFit.fitWidth,
                               ),
@@ -319,7 +319,7 @@ class PortfolioScreen extends StatelessWidget {
                               image: DecorationImage(
                                 // alignment: Alignment.centerRight,
                                 image: AssetImage(
-                                  "assets/images/portfolioAssets/customer4.png",
+                                  "images/portfolioAssets/customer4.png",
                                 ),
                                 fit: BoxFit.fitWidth,
                               ),
@@ -335,7 +335,7 @@ class PortfolioScreen extends StatelessWidget {
                               image: DecorationImage(
                                 // alignment: Alignment.centerRight,
                                 image: AssetImage(
-                                  "assets/images/portfolioAssets/customer5.png",
+                                  "images/portfolioAssets/customer5.png",
                                 ),
                                 fit: BoxFit.fitWidth,
                               ),
@@ -351,7 +351,7 @@ class PortfolioScreen extends StatelessWidget {
                               image: DecorationImage(
                                 // alignment: Alignment.centerRight,
                                 image: AssetImage(
-                                  "assets/images/portfolioAssets/customer6.png",
+                                  "images/portfolioAssets/customer6.png",
                                 ),
                                 fit: BoxFit.fitWidth,
                               ),

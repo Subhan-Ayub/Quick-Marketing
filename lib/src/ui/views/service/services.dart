@@ -27,7 +27,7 @@ class Services extends StatelessWidget {
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(
-                              "assets/images/services/innerpage-banner-3.jpg",
+                              "images/services/innerpage-banner-3.jpg",
                             ),
                             fit: BoxFit.cover)),
                     child: Text(
