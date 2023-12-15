@@ -1,6 +1,5 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/animation.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController with GetTickerProviderStateMixin {
@@ -15,7 +14,7 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
   void onInit() {
     super.onInit();
     _controller = AnimationController(
-      duration: Duration(seconds: 5),
+      duration: Duration(seconds: 3),
       vsync: this,
     );
     _controller.addStatusListener((status) {
@@ -59,15 +58,13 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
     super.onClose();
   }
 
-  @override
-  void onReady() {
-    // _controller.reset();
-    // anime.forward();
-    // _controller.forward();
-    // Future.delayed(Duration(seconds: 1), () {
-    //   containerWidth.value = Get.height / 1 - 300.0;
-    // });
+  // @override
+  // void onReady() {
+    
 
-    super.onReady();
-  }
+  //   super.onReady();
+    
+  // }
+
+  
 }
