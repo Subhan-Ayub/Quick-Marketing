@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quickmarket/src/controllers/contactUsController.dart';
 import 'package:quickmarket/src/ui/widgets/footerWidget.dart';
 import 'package:quickmarket/src/utils/config/commonscafold.dart';
+import 'package:flutter_map/flutter_map.dart';
+
 
 class ContactUs extends StatelessWidget {
+  final ConatctUsController _ = Get.find<ConatctUsController>();
   @override
   Widget build(BuildContext context) {
     return CommonScafold(
@@ -138,14 +142,103 @@ class ContactUs extends StatelessWidget {
                       height: 400,
                       width: Get.width / 2.5,
                       decoration: BoxDecoration(
-                      color: Colors.amber,
+                          color: Color.fromARGB(104, 206, 206, 206),
                           borderRadius: BorderRadius.circular(10)),
-                          child: TextField(),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextField(
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Full Name',
+                              border: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.blue, width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Email',
+                              border: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.blue, width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Subject',
+                              border: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.blue, width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                          TextField(
+                            maxLines: 5,
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Message',
+                              border: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.blue, width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                        ],
+                      ),
                     )
                   ],
-                )
+                ).marginOnly(bottom: 50),
               ],
             ).marginSymmetric(horizontal: 130),
+            Container(
+              height: 450,
+              width: Get.width,
+              color: Colors.black,
+        //       child: FlutterMap(
+        //   options: MapOptions(
+        //     center: _.center.value,
+        //     zoom: _.zoom,
+        //     onTap: (point) {
+        //       _.updateMapPosition(point);
+        //     },
+        //   ),
+        //   layers: [
+        //     TileLayerOptions(
+        //       urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        //       subdomains: ['a', 'b', 'c'],
+        //     ),
+        //     MarkerLayerOptions(
+        //       markers: [
+        //         Marker(
+        //           width: 30.0,
+        //           height: 30.0,
+        //           point: _.center.value,
+        //           builder: (ctx) => Container(
+        //             child: FlutterLogo(),
+        //           ),
+        //         ),
+        //       ],
+        //     ),
+        //   ],
+        // ),
+            ),
             FooterWidget()
           ],
         ),

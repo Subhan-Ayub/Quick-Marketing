@@ -1,4 +1,5 @@
 import 'package:quickmarket/src/bindings/about_bindings.dart';
+import 'package:quickmarket/src/bindings/contactUs_bindings.dart';
 import 'package:quickmarket/src/bindings/portfolioBinding.dart';
 import 'package:quickmarket/src/ui/views/aboutUs.dart';
 import 'package:quickmarket/src/ui/views/contact.dart';
@@ -92,6 +93,7 @@ class AppPages {
         transition: Transition.noTransition),
          GetPage(
         name: Routes.contactUs,
+        binding: ContactUsBindings(),
         page: () => ContactUs(),
         transition: Transition.noTransition),
   ];
