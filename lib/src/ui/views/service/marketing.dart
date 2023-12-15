@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quickmarket/src/utils/config/widgetresponsive.dart';
 
 import '../../../utils/config/commonscafold.dart';
+import '../../../utils/config/responsive.dart';
 import '../../../utils/config/uidata.dart';
 import '../../widgets/footerWidget.dart';
 import '../../widgets/hoverWidget.dart';
@@ -21,8 +23,12 @@ class MarketingService extends StatelessWidget {
                 children: [
                   Container(
                     width: Get.width,
-                    height: 200,
-                    decoration: BoxDecoration(
+                    height: !Responsive.isMobileContext(context)
+                        ? Responsive.isTabletContext(context)
+                            ? 170
+                            : 200
+                        : 100,
+                    decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(
                                 "images/services/marketing/Digital-Marketing.jpg"),
@@ -30,20 +36,26 @@ class MarketingService extends StatelessWidget {
                   ),
                   Container(
                     width: Get.width,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          alignment: Alignment.centerRight,
-                          width: Get.width / 2.5,
-                          height: 600,
+                    child: ResponsiveTextFieldRow(
+                        firstTextField: Container(
+                          alignment: Responsive.isMobileContext(context)
+                              ? Alignment.center
+                              : Alignment.centerRight,
+                          width: Responsive.isMobileContext(context)
+                              ? Get.width / 1.1
+                              : Get.width / 2.5,
+                          height:
+                              Responsive.isMobileContext(context) ? 400 : 600,
                           child: Image.asset(
                               "images/services/marketing/digital-marketing.png"),
                         ).paddingSymmetric(horizontal: 10),
-                        Container(
-                          alignment: Alignment.topLeft,
-                          width: Get.width / 2.5,
+                        secondTextField: Container(
+                          alignment: Responsive.isMobileContext(context)
+                              ? Alignment.center
+                              : Alignment.topLeft,
+                          width: Responsive.isMobileContext(context)
+                              ? Get.width / 1.1
+                              : Get.width / 2.5,
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -56,7 +68,13 @@ class MarketingService extends StatelessWidget {
                                         Text(
                                           'Digital Marketing',
                                           style: TextStyle(
-                                              fontSize: 45,
+                                              fontSize: !Responsive
+                                                      .isMobileContext(context)
+                                                  ? Responsive.isTabletContext(
+                                                          context)
+                                                      ? 30
+                                                      : 45
+                                                  : 30,
                                               fontWeight: FontWeight.bold,
                                               color: UIDataColors.blackColor,
                                               decoration: TextDecoration.none),
@@ -75,8 +93,18 @@ class MarketingService extends StatelessWidget {
                                   'The Marketing and advertising field has traveled a lot through different times and now have successfully landed in the global village era where everything has become digital and aroused on the web. We as an Digital agency having the specialty in digital media (Social Media Marketing) are always digging the most outstanding catalogs for your business to proliferate at every edge, from designing campaigns, formatting publicity paths to executing it over all the platforms of social media we devote ourselves completely to get the highest results.',
                                   style: TextStyle(
                                       color: UIDataColors.blackColor,
-                                      fontSize: 16,
-                                      height: 1.6,
+                                      fontSize: !Responsive.isMobileContext(
+                                              context)
+                                          ? Responsive.isTabletContext(context)
+                                              ? 14
+                                              : 16
+                                          : 14,
+                                      height: !Responsive.isMobileContext(
+                                              context)
+                                          ? Responsive.isTabletContext(context)
+                                              ? 1.4
+                                              : 1.6
+                                          : 1.4,
                                       fontWeight: FontWeight.normal,
                                       decoration: TextDecoration.none),
                                 ).paddingOnly(top: 20, bottom: 15),
@@ -84,8 +112,18 @@ class MarketingService extends StatelessWidget {
                                   'Perfection is a lie but we like to turn it upside down. By paying attention to every detail, we feed products to grow digital and make the best of all existing platforms. We make it easy for you to manage outgoing and incoming internet communications. With our effective marketing strategy we help you start a business plan and build the best marketing strategy to simplify and integrate your work.',
                                   style: TextStyle(
                                       color: UIDataColors.blackColor,
-                                      fontSize: 16,
-                                      height: 1.6,
+                                      fontSize: !Responsive.isMobileContext(
+                                              context)
+                                          ? Responsive.isTabletContext(context)
+                                              ? 14
+                                              : 16
+                                          : 14,
+                                      height: !Responsive.isMobileContext(
+                                              context)
+                                          ? Responsive.isTabletContext(context)
+                                              ? 1.4
+                                              : 1.6
+                                          : 1.4,
                                       fontWeight: FontWeight.normal,
                                       decoration: TextDecoration.none),
                                 ),
@@ -93,8 +131,18 @@ class MarketingService extends StatelessWidget {
                                   'Trio Tec Digital experts can help you figure out ways to grow and hack the way to your digital success. Our experts carefully evaluate your digital presence to identify errors and suggest improvements.',
                                   style: TextStyle(
                                       color: UIDataColors.blackColor,
-                                      fontSize: 16,
-                                      height: 1.6,
+                                      fontSize: !Responsive.isMobileContext(
+                                              context)
+                                          ? Responsive.isTabletContext(context)
+                                              ? 14
+                                              : 16
+                                          : 14,
+                                      height: !Responsive.isMobileContext(
+                                              context)
+                                          ? Responsive.isTabletContext(context)
+                                              ? 1.4
+                                              : 1.6
+                                          : 1.4,
                                       fontWeight: FontWeight.normal,
                                       decoration: TextDecoration.none),
                                 ).paddingOnly(top: 15, bottom: 50),
@@ -102,24 +150,31 @@ class MarketingService extends StatelessWidget {
                                   'Trio Tec Digital is a complete Pakistan-based digital marketing firm driven by smart and creative and passionate people. We believe in the development of strong products, good clean design, and well-crafted content. And integrated strategies. From digital marketing to website development. Progress, we are more than just another institution. We are your next partner.',
                                   style: TextStyle(
                                       color: UIDataColors.blackColor,
-                                      fontSize: 16,
-                                      height: 1.6,
+                                      fontSize: !Responsive.isMobileContext(
+                                              context)
+                                          ? Responsive.isTabletContext(context)
+                                              ? 14
+                                              : 16
+                                          : 14,
+                                      height: !Responsive.isMobileContext(
+                                              context)
+                                          ? Responsive.isTabletContext(context)
+                                              ? 1.4
+                                              : 1.6
+                                          : 1.4,
                                       fontWeight: FontWeight.normal,
                                       decoration: TextDecoration.none),
                                 ),
                               ]),
-                        )
-                      ],
-                    ),
+                        )),
                   ).paddingSymmetric(vertical: 10),
                   Container(
-                    width: Get.width / 1.3,
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            width: Get.width / 4.5,
+                      width: Get.width / 1.3,
+                      child: ResponsiveTextFieldRow(
+                          firstTextField: Container(
+                            width: Responsive.isMobileContext(context)
+                                ? Get.width / 1.1
+                                : Get.width / 4.5,
                             child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,7 +183,13 @@ class MarketingService extends StatelessWidget {
                                     'EMAIL CAMPAIGNS',
                                     style: TextStyle(
                                         color: UIDataColors.orangeColor,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         fontWeight: FontWeight.bold,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(bottom: 15),
@@ -137,7 +198,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -145,7 +212,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -153,7 +226,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -161,13 +240,21 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                 ]),
                           ),
-                          Container(
-                            width: Get.width / 4.5,
+                          secondTextField: Container(
+                            width: Responsive.isMobileContext(context)
+                                ? Get.width / 1.1
+                                : Get.width / 4.5,
                             child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -176,7 +263,13 @@ class MarketingService extends StatelessWidget {
                                     'ONLINE ADVERTISING',
                                     style: TextStyle(
                                         color: UIDataColors.orangeColor,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         fontWeight: FontWeight.bold,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(bottom: 15),
@@ -185,7 +278,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -193,7 +292,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -201,7 +306,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -209,7 +320,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -217,7 +334,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -225,13 +348,23 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                 ]),
-                          ),
-                          Container(
-                            width: Get.width / 4.5,
+                          ).paddingSymmetric(
+                              vertical:
+                                  Responsive.isMobileContext(context) ? 40 : 0),
+                          thirdTextField: Container(
+                            width: Responsive.isMobileContext(context)
+                                ? Get.width / 1.1
+                                : Get.width / 4.5,
                             child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -240,7 +373,13 @@ class MarketingService extends StatelessWidget {
                                     'SEARCH ENGINE OPTIMIZATION',
                                     style: TextStyle(
                                         color: UIDataColors.orangeColor,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         fontWeight: FontWeight.bold,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(bottom: 15),
@@ -249,7 +388,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -257,7 +402,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -265,7 +416,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -273,7 +430,13 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                   Text(
@@ -281,13 +444,17 @@ class MarketingService extends StatelessWidget {
                                     style: TextStyle(
                                         color: UIDataColors.blackColor,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16,
+                                        fontSize:
+                                            !Responsive.isMobileContext(context)
+                                                ? Responsive.isTabletContext(
+                                                        context)
+                                                    ? 14
+                                                    : 16
+                                                : 14,
                                         decoration: TextDecoration.none),
                                   ).paddingOnly(top: 10),
                                 ]),
-                          )
-                        ]),
-                  ).paddingOnly(top: 20, bottom: 50),
+                          ))).paddingOnly(top: 20, bottom: 50),
                   FooterWidget()
                 ],
               ),

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:quickmarket/src/utils/routes/app_routes.dart';
 import 'package:get/get.dart';
+import 'package:quickmarket/src/ui/widgets/hoverWidget.dart';
+import 'package:quickmarket/src/utils/config/uidata.dart';
+
 
 class AppBarController extends GetxController {
   RxBool isHovered = false.obs;
