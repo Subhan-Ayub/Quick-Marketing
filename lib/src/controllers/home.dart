@@ -14,7 +14,7 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
   void onInit() {
     super.onInit();
     _controller = AnimationController(
-      duration: Duration(seconds: 3),
+      duration: Duration(milliseconds: 3850),
       vsync: this,
     );
     _controller.addStatusListener((status) {
@@ -60,11 +60,8 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
 
   // @override
   // void onReady() {
-    
 
   //   super.onReady();
-    
-  // }
 
-  
+  // }
 }

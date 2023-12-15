@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
                 height: Get.height / 1.33,
                 // enlargeCenterPage: true,
                 autoPlay: true,
-                autoPlayInterval: Duration(seconds: 3),
+                autoPlayInterval: Duration(seconds: 4),
                 autoPlayAnimationDuration: Duration(milliseconds: 1100),
                 autoPlayCurve: Curves.fastOutSlowIn,
                 pauseAutoPlayOnTouch: true,
@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                     image: DecorationImage(
                       // alignment: Alignment.centerRight,
                       image: AssetImage(
-                        "assets/images/home/1.jpg",
+                        "images/home/1.jpg",
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -103,7 +103,7 @@ class HomeScreen extends StatelessWidget {
                     image: DecorationImage(
                       // alignment: Alignment.centerRight,
                       image: AssetImage(
-                        "assets/images/home/2.jpg",
+                        "images/home/2.jpg",
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -147,7 +147,7 @@ class HomeScreen extends StatelessWidget {
                     image: DecorationImage(
                       // alignment: Alignment.centerRight,
                       image: AssetImage(
-                        "assets/images/home/3.jpg",
+                        "images/home/3.jpg",
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -191,7 +191,7 @@ class HomeScreen extends StatelessWidget {
                     image: DecorationImage(
                       // alignment: Alignment.centerRight,
                       image: AssetImage(
-                        "assets/images/home/4.jpg",
+                        "images/home/4.jpg",
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -245,7 +245,7 @@ class HomeScreen extends StatelessWidget {
                       // borderRadius: BorderRadius.circular(8.0),
                       image: DecorationImage(
                         image: AssetImage(
-                          "assets/images/home/Artboard-3.png",
+                          "images/home/Artboard-3.png",
                         ),
                         fit: BoxFit.contain,
                       ),
@@ -326,7 +326,7 @@ class HomeScreen extends StatelessWidget {
                           child: Column(
                             children: [
                               Image.asset(
-                                'assets/images/home/cm.png',
+                                'images/home/cm.png',
                                 width: 70,
                                 height: 70,
                               ),
@@ -379,7 +379,7 @@ class HomeScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             Image.asset(
-                              'assets/images/home/ad.png',
+                              'images/home/ad.png',
                               width: 75,
                               height: 75,
                             ),
@@ -430,7 +430,7 @@ class HomeScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             Image.asset(
-                              'assets/images/home/ppc.png',
+                              'images/home/ppc.png',
                               width: 75,
                               height: 75,
                             ),
@@ -487,7 +487,7 @@ class HomeScreen extends StatelessWidget {
                           child: Column(
                             children: [
                               Image.asset(
-                                'assets/images/home/seo.png',
+                                'images/home/seo.png',
                                 width: 75,
                                 height: 75,
                               ),
@@ -541,7 +541,7 @@ class HomeScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             Image.asset(
-                              'assets/images/home/smm.png',
+                              'images/home/smm.png',
                               width: 75,
                               height: 75,
                             ),
@@ -592,7 +592,7 @@ class HomeScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             Image.asset(
-                              'assets/images/home/web-dev.png',
+                              'images/home/web-dev.png',
                               width: 75,
                               height: 75,
                             ),
@@ -671,7 +671,7 @@ class HomeScreen extends StatelessWidget {
                           child: Column(
                             children: [
                               Image.asset(
-                                'assets/images/home/homeone-img-9.png',
+                                'images/home/homeone-img-9.png',
                                 width: 75,
                                 height: 75,
                               ),
@@ -723,7 +723,7 @@ class HomeScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             Image.asset(
-                              'assets/images/home/homeone-img-10.png',
+                              'images/home/homeone-img-10.png',
                               width: 75,
                               height: 75,
                             ),
@@ -767,7 +767,7 @@ class HomeScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             Image.asset(
-                              'assets/images/home/homeone-img-11.png',
+                              'images/home/homeone-img-11.png',
                               width: 75,
                               height: 75,
                             ),
@@ -799,7 +799,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
 
-            //portfolio
+            //portfolioAssets/
 
             Container(
               width: Get.width,
@@ -823,7 +823,7 @@ class HomeScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               SvgPicture.asset(
-                                "assets/images/portfolioAssets/www.svg",
+                                "images/portfolioAssets/www.svg",
                                 width: Get.width / 30,
                               ),
                               Text(
@@ -840,7 +840,7 @@ class HomeScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               SvgPicture.asset(
-                                "assets/images/portfolioAssets/digital-marketing.svg",
+                                "images/portfolioAssets/digital-marketing.svg",
                                 width: Get.width / 30,
                               ),
                               Text(
@@ -857,7 +857,7 @@ class HomeScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               SvgPicture.asset(
-                                "assets/images/portfolioAssets/photo-camera.svg",
+                                "images/portfolioAssets/photo-camera.svg",
                               ),
                               Text(
                                 "Product Photography",
@@ -885,7 +885,7 @@ class HomeScreen extends StatelessWidget {
                             return Container(
                               // height: Get.height / 9,
                               child: Image.asset(
-                                "assets/images/portfolioAssets/tab-1-1.png",
+                                "images/portfolioAssets/tab-1-1.png",
                                 fit: BoxFit.fitWidth,
                               ),
                             );
@@ -934,7 +934,7 @@ class HomeScreen extends StatelessWidget {
                                         topRight: Radius.circular(10),
                                       ),
                                       child: Image.asset(
-                                        "assets/images/portfolioAssets/customer6.png",
+                                        "images/portfolioAssets/customer6.png",
                                         height: Get.height / 13,
                                         // width: 120,
                                         fit: BoxFit.fill,
@@ -966,7 +966,7 @@ class HomeScreen extends StatelessWidget {
                                           width: Get.height / 30,
                                         ),
                                         Image.asset(
-                                          "assets/images/portfolioAssets/insta.png",
+                                          "images/portfolioAssets/insta.png",
                                           width: Get.width / 44,
                                           // color: Color.fromARGB(255,122, 122, 122),
                                         ),
@@ -974,7 +974,7 @@ class HomeScreen extends StatelessWidget {
                                           width: Get.height / 30,
                                         ),
                                         SvgPicture.asset(
-                                          "assets/images/portfolioAssets/www.svg",
+                                          "images/portfolioAssets/www.svg",
                                           width: Get.width / 52,
                                         ),
                                       ],
@@ -1080,8 +1080,7 @@ class HomeScreen extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/images/home/m1.jpg'),
+                                      image: AssetImage('images/home/m1.jpg'),
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -1173,8 +1172,7 @@ class HomeScreen extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/images/home/m2.jpg'),
+                                      image: AssetImage('images/home/m2.jpg'),
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -1266,8 +1264,7 @@ class HomeScreen extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/images/home/m3.jpg'),
+                                      image: AssetImage('images/home/m3.jpg'),
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -1359,8 +1356,7 @@ class HomeScreen extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/images/home/m4.jpg'),
+                                      image: AssetImage('images/home/m4.jpg'),
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -1451,8 +1447,7 @@ class HomeScreen extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/images/home/m5.jpg'),
+                                      image: AssetImage('images/home/m5.jpg'),
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -1556,7 +1551,7 @@ class HomeScreen extends StatelessWidget {
                           image: DecorationImage(
                             // alignment: Alignment.centerRight,
                             image: AssetImage(
-                              "assets/images/portfolioAssets/customer1.png",
+                              "images/portfolioAssets/customer1.png",
                             ),
                             fit: BoxFit.fitWidth,
                           ),
@@ -1572,7 +1567,7 @@ class HomeScreen extends StatelessWidget {
                           image: DecorationImage(
                             // alignment: Alignment.centerRight,
                             image: AssetImage(
-                              "assets/images/portfolioAssets/customer2.png",
+                              "images/portfolioAssets/customer2.png",
                             ),
                             fit: BoxFit.fitWidth,
                           ),
@@ -1588,7 +1583,7 @@ class HomeScreen extends StatelessWidget {
                           image: DecorationImage(
                             // alignment: Alignment.centerRight,
                             image: AssetImage(
-                              "assets/images/portfolioAssets/customer3.png",
+                              "images/portfolioAssets/customer3.png",
                             ),
                             fit: BoxFit.fitWidth,
                           ),
@@ -1604,7 +1599,7 @@ class HomeScreen extends StatelessWidget {
                           image: DecorationImage(
                             // alignment: Alignment.centerRight,
                             image: AssetImage(
-                              "assets/images/portfolioAssets/customer4.png",
+                              "images/portfolioAssets/customer4.png",
                             ),
                             fit: BoxFit.fitWidth,
                           ),
@@ -1620,7 +1615,7 @@ class HomeScreen extends StatelessWidget {
                           image: DecorationImage(
                             // alignment: Alignment.centerRight,
                             image: AssetImage(
-                              "assets/images/portfolioAssets/customer5.png",
+                              "images/portfolioAssets/customer5.png",
                             ),
                             fit: BoxFit.fitWidth,
                           ),
@@ -1636,7 +1631,7 @@ class HomeScreen extends StatelessWidget {
                           image: DecorationImage(
                             // alignment: Alignment.centerRight,
                             image: AssetImage(
-                              "assets/images/portfolioAssets/customer6.png",
+                              "images/portfolioAssets/customer6.png",
                             ),
                             fit: BoxFit.fitWidth,
                           ),
@@ -1690,7 +1685,7 @@ class HomeScreen extends StatelessWidget {
                                 border: Border.all(width: .2),
                                 image: DecorationImage(
                                   image: AssetImage(
-                                    "assets/images/home/card1.jpg",
+                                    "images/home/card1.jpg",
                                   ),
                                   fit: BoxFit.fitWidth,
                                 ),
@@ -1745,7 +1740,7 @@ class HomeScreen extends StatelessWidget {
                                 border: Border.all(width: .2),
                                 image: DecorationImage(
                                   image: AssetImage(
-                                    "assets/images/home/card1.jpg",
+                                    "images/home/card1.jpg",
                                   ),
                                   fit: BoxFit.fitWidth,
                                 ),
@@ -1800,7 +1795,7 @@ class HomeScreen extends StatelessWidget {
                                 border: Border.all(width: .2),
                                 image: DecorationImage(
                                   image: AssetImage(
-                                    "assets/images/home/card1.jpg",
+                                    "images/home/card1.jpg",
                                   ),
                                   fit: BoxFit.fitWidth,
                                 ),
@@ -1855,7 +1850,7 @@ class HomeScreen extends StatelessWidget {
                                 border: Border.all(width: .2),
                                 image: DecorationImage(
                                   image: AssetImage(
-                                    "assets/images/home/card1.jpg",
+                                    "images/home/card1.jpg",
                                   ),
                                   fit: BoxFit.fitWidth,
                                 ),
