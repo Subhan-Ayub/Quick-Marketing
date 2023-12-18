@@ -11,7 +11,7 @@ class Services extends StatelessWidget {
   final ServicesController _ = Get.find<ServicesController>();
 
   @override
-  Widget build(context) {
+  Widget build(BuildContext context) {
     return CommonScafold(
       body: SingleChildScrollView(
         child: Stack(

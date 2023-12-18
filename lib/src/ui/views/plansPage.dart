@@ -146,7 +146,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children:  [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -155,7 +155,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: [
+                                          children: const [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -425,7 +425,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children:  [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -434,7 +434,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: [
+                                          children: const [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -704,7 +704,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children:  [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -713,7 +713,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: [
+                                          children: const [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -983,7 +983,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children:  [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -992,7 +992,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: [
+                                          children: const [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -1272,7 +1272,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children:  [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -1281,7 +1281,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: [
+                                          children: const [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -1551,7 +1551,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children:  [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -1560,7 +1560,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: [
+                                          children:const [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -1830,7 +1830,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children: [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -1839,7 +1839,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: [
+                                          children: const [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -2120,7 +2120,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children: [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -2129,7 +2129,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: [
+                                          children: const [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -2399,7 +2399,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children: [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -2408,7 +2408,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: [
+                                          children: const [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -2678,7 +2678,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children: [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -2687,7 +2687,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: [
+                                          children:const [
                                             Text(
                                               '20000',
                                               style: TextStyle(

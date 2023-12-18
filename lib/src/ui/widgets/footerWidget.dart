@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quickmarket/src/utils/config/responsive.dart';
+import 'package:quickmarket/src/utils/config/widgetresponsive.dart';
 import '../../utils/config/uidata.dart';
 
 class FooterWidget extends StatelessWidget {
@@ -11,13 +13,15 @@ class FooterWidget extends StatelessWidget {
       children: [
         Container(
             width: Get.width,
-            height: Get.height / 2.1,
+            // height: Get.height / 2,
             color: Color.fromARGB(255, 88, 75, 230),
-            child: GridView.count(
-              crossAxisCount: 4,
-              crossAxisSpacing: 30,
-              children: [
-                Container(
+            child: FooterResponsive(
+                first: Container(
+                  width: !Responsive.isMobileContext(context)
+                      ? Responsive.isTabletContext(context)
+                          ? Get.width / 2
+                          : Get.width / 4
+                      : Get.width / 1.2,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -81,8 +85,13 @@ class FooterWidget extends StatelessWidget {
                       )
                     ],
                   ),
-                ),
-                Container(
+                ).paddingOnly(left: 20),
+                second: Container(
+                  width: !Responsive.isMobileContext(context)
+                      ? Responsive.isTabletContext(context)
+                          ? Get.width / 3
+                          : Get.width / 4
+                      : Get.width / 1.2,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -153,7 +162,12 @@ class FooterWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
+                third: Container(
+                  width: !Responsive.isMobileContext(context)
+                      ? Responsive.isTabletContext(context)
+                          ? Get.width / 3
+                          : Get.width / 4
+                      : Get.width / 1.2,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -216,7 +230,12 @@ class FooterWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
+                fourth: Container(
+                  width: !Responsive.isMobileContext(context)
+                      ? Responsive.isTabletContext(context)
+                          ? Get.width / 3
+                          : Get.width / 4
+                      : Get.width / 1.2,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -228,75 +247,92 @@ class FooterWidget extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                   decoration: TextDecoration.none))
                           .paddingOnly(bottom: 15),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.contact_support,
-                            color: UIDataColors.orangeColor,
-                          ).paddingOnly(right: 10),
-                          SizedBox(
-                            width: Get.width / 5,
-                            child: Text(
-                                    '601 D, Eden Towers, Main Boulevard Gulberg.',
-                                    style: TextStyle(
-                                        color: UIDataColors.whiteColor,
-                                        fontSize: 16,
-                                        height: 1.6,
-                                        fontWeight: FontWeight.normal,
-                                        decoration: TextDecoration.none))
-                                .paddingOnly(bottom: 15),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.email,
-                            color: UIDataColors.orangeColor,
-                          ).paddingOnly(right: 10),
-                          SizedBox(
-                            width: Get.width / 5,
-                            child: Text('triotecdigital@gmail.com',
-                                    style: TextStyle(
-                                        color: UIDataColors.whiteColor,
-                                        fontSize: 16,
-                                        height: 1.6,
-                                        fontWeight: FontWeight.normal,
-                                        decoration: TextDecoration.none))
-                                .paddingOnly(bottom: 15),
-                          ),
-                        ],
-                      ).paddingSymmetric(vertical: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.phone,
-                            color: UIDataColors.orangeColor,
-                          ).paddingOnly(right: 10),
-                          SizedBox(
-                            width: Get.width / 5,
-                            child: Text('+92 321 1078781',
-                                    style: TextStyle(
-                                        color: UIDataColors.whiteColor,
-                                        fontSize: 16,
-                                        height: 1.6,
-                                        fontWeight: FontWeight.normal,
-                                        decoration: TextDecoration.none))
-                                .paddingOnly(bottom: 15),
-                          ),
-                        ],
-                      ),
+
+                      Text('601 D, Eden Towers, Main Boulevard Gulberg.',
+                              style: TextStyle(
+                                  color: UIDataColors.whiteColor,
+                                  fontSize: 16,
+                                  height: 1.6,
+                                  fontWeight: FontWeight.normal,
+                                  decoration: TextDecoration.none))
+                          .paddingOnly(bottom: 15),
+
+                      Text('triotecdigital@gmail.com',
+                              style: TextStyle(
+                                  color: UIDataColors.whiteColor,
+                                  fontSize: 16,
+                                  height: 1.6,
+                                  fontWeight: FontWeight.normal,
+                                  decoration: TextDecoration.none))
+                          .paddingOnly(bottom: 15),
+
+                      Text('+92 321 1078781',
+                              style: TextStyle(
+                                  color: UIDataColors.whiteColor,
+                                  fontSize: 16,
+                                  height: 1.6,
+                                  fontWeight: FontWeight.normal,
+                                  decoration: TextDecoration.none))
+                          .paddingOnly(bottom: 15),
+                      // Row(
+                      //   // mainAxisAlignment: MainAxisAlignment.center,
+                      //   crossAxisAlignment: CrossAxisAlignment.center,
+                      //   children: [
+                      //     Icon(
+                      //       Icons.contact_support,
+                      //       color: UIDataColors.orangeColor,
+                      //     ).paddingOnly(right: 10),
+                      //     Text('601 D, Eden Towers, Main Boulevard Gulberg.',
+                      //             style: TextStyle(
+                      //                 color: UIDataColors.whiteColor,
+                      //                 fontSize: 16,
+                      //                 height: 1.6,
+                      //                 fontWeight: FontWeight.normal,
+                      //                 decoration: TextDecoration.none))
+                      //         .paddingOnly(bottom: 15),
+                      //   ],
+                      // ),
+                      // Row(
+                      //   // mainAxisAlignment: MainAxisAlignment.center,
+                      //   crossAxisAlignment: CrossAxisAlignment.center,
+                      //   children: [
+                      //     Icon(
+                      //       Icons.email,
+                      //       color: UIDataColors.orangeColor,
+                      //     ).paddingOnly(right: 10),
+                      //     Text('triotecdigital@gmail.com',
+                      //             style: TextStyle(
+                      //                 color: UIDataColors.whiteColor,
+                      //                 fontSize: 16,
+                      //                 height: 1.6,
+                      //                 fontWeight: FontWeight.normal,
+                      //                 decoration: TextDecoration.none))
+                      //         .paddingOnly(bottom: 15),
+                      //   ],
+                      // ).paddingSymmetric(vertical: 10),
+                      // Row(
+                      //   // mainAxisAlignment: MainAxisAlignment.center,
+                      //   crossAxisAlignment: CrossAxisAlignment.center,
+                      //   children: [
+                      //     Icon(
+                      //       Icons.phone,
+                      //       color: UIDataColors.orangeColor,
+                      //     ).paddingOnly(right: 10),
+                      //     Text('+92 321 1078781',
+                      //             style: TextStyle(
+                      //                 color: UIDataColors.whiteColor,
+                      //                 fontSize: 16,
+                      //                 height: 1.6,
+                      //                 fontWeight: FontWeight.normal,
+                      //                 decoration: TextDecoration.none))
+                      //         .paddingOnly(bottom: 15),
+                      //   ],
+                      // ),
                     ],
                   ),
-                ),
-              ],
-            ).paddingOnly(left: 20, top: 30, right: 20)),
+                )).paddingSymmetric(
+              vertical: 20,
+            )),
         Container(
           alignment: Alignment.center,
           width: Get.width,

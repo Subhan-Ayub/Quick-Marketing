@@ -1087,7 +1087,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children:  [
                                     Text(
                                       "Mattscoffham",
                                       style: TextStyle(
@@ -1097,7 +1097,7 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                     ),
                                     Row(
-                                      children: [
+                                      children:const [
                                         Icon(
                                           Icons.star,
                                           color: Colors.yellow,
@@ -1179,7 +1179,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     Text(
                                       "Mattscoffham",
                                       style: TextStyle(
@@ -1189,7 +1189,7 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                     ),
                                     Row(
-                                      children: [
+                                      children: const [
                                         Icon(
                                           Icons.star,
                                           color: Colors.yellow,
@@ -1271,7 +1271,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children:  [
                                     Text(
                                       "Mattscoffham",
                                       style: TextStyle(
@@ -1281,7 +1281,7 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                     ),
                                     Row(
-                                      children: [
+                                      children: const [
                                         Icon(
                                           Icons.star,
                                           color: Colors.yellow,
@@ -1363,7 +1363,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children:  [
                                     Text(
                                       "Mattscoffham",
                                       style: TextStyle(
@@ -1373,7 +1373,7 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                     ),
                                     Row(
-                                      children: [
+                                      children: const [
                                         Icon(
                                           Icons.star,
                                           color: Colors.yellow,
@@ -1454,7 +1454,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children:  [
                                     Text(
                                       "Mattscoffham",
                                       style: TextStyle(
@@ -1464,7 +1464,7 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                     ),
                                     Row(
-                                      children: [
+                                      children: const [
                                         Icon(
                                           Icons.star,
                                           color: Colors.yellow,

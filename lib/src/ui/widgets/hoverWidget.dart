@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quickmarket/src/utils/config/uidata.dart';
 import 'package:quickmarket/src/utils/routes/app_routes.dart';
@@ -11,7 +10,7 @@ class HoverWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
+        return Obx(
       () => (hov.tryy.value
           ? MouseRegion(
               onEnter: (event) {
@@ -246,3 +245,4 @@ class HoverWidget extends StatelessWidget {
     );
   }
 }
+
