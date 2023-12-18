@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:quickmarket/src/utils/config/responsive.dart';
 
 class ResponsiveTextFieldRow extends StatelessWidget {
@@ -53,5 +54,70 @@ class ResponsiveTextFieldRow extends StatelessWidget {
                 ),
             ],
           );
+  }
+}
+
+class FooterResponsive extends StatelessWidget {
+  final Widget first;
+  final Widget? second;
+  final Widget? third;
+  final Widget? fourth;
+
+  FooterResponsive({
+    required this.first,
+    this.second,
+    this.third,
+    this.fourth,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Responsive.isMobileContext(context)
+        ? Column(
+            children: [
+              first,
+              SizedBox(height: 20),
+              if (second != null) second!,
+              SizedBox(height: 20),
+              if (third != null) third!,
+              SizedBox(height: 20),
+              if (fourth != null) fourth!,
+            ],
+          )
+        : (Responsive.isTabletContext(context)
+            ? Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(child: first),
+                      if (second != null) SizedBox(width: 20),
+                      if (second != null) SizedBox(child: second!),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(child: third!),
+                      if (fourth != null) SizedBox(width: 20),
+                      if (fourth != null) SizedBox(child: fourth!),
+                    ],
+                  ).paddingSymmetric(horizontal: 20),
+                ],
+              )
+            : Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(child: first),
+                  if (second != null) SizedBox(width: 20),
+                  if (second != null) SizedBox(child: second!),
+                  if (third != null) SizedBox(width: 20),
+                  if (third != null) SizedBox(child: third!),
+                  if (fourth != null) SizedBox(width: 20),
+                  if (fourth != null) SizedBox(child: fourth!),
+                ],
+              ));
   }
 }
