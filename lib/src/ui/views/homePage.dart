@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
                 height: Get.height / 1.33,
                 // enlargeCenterPage: true,
                 autoPlay: true,
-                autoPlayInterval: Duration(seconds: 4),
+                autoPlayInterval: Duration(milliseconds: 3500),
                 autoPlayAnimationDuration: Duration(milliseconds: 1100),
                 autoPlayCurve: Curves.fastOutSlowIn,
                 pauseAutoPlayOnTouch: true,
