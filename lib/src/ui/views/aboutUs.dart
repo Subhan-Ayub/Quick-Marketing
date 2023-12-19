@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:animated_text_lerp/animated_text_lerp.dart';
 import 'package:quickmarket/src/ui/widgets/footerWidget.dart';
+import 'package:quickmarket/src/utils/config/responsive.dart';
 
 import '../../controllers/aboutController.dart';
 import '../../utils/config/commonscafold.dart';
@@ -96,7 +97,9 @@ class AboutUs extends StatelessWidget {
                     height: 500,
                     child: GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 5, // Number of columns
+                        crossAxisCount: !Responsive.isDesktopContext(context)
+                            ? 3
+                            : 5, // Number of columns
                         crossAxisSpacing: 8.0, // Spacing between columns
                         mainAxisSpacing: 8.0, // Spacing between rows
                       ),
@@ -116,75 +119,164 @@ class AboutUs extends StatelessWidget {
                     ),
                   ).marginOnly(top: 20),
                   Container(
+                    width: Responsive.isMobileContext(context)?Get.width:null,
                     decoration: BoxDecoration(
                         color: Color.fromARGB(255, 88, 75, 230),
                         borderRadius: BorderRadius.circular(20)),
                     padding: EdgeInsets.all(20),
-                    child: Obx(() => Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Column(
-                              children: [
-                                AnimatedNumberText(
-                                  _.clients.value,
-                                  curve: Curves.easeIn,
-                                  duration: const Duration(milliseconds: 1000),
-                                  style: const TextStyle(
-                                      fontFamily: 'Popins',
-                                      fontSize: 40,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                                const Text('Satisfied Clients',style: TextStyle(color: Colors.white),)
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                AnimatedNumberText(
-                                  _.campaigns.value,
-                                  curve: Curves.easeIn,
-                                  duration: const Duration(milliseconds: 1500),
-                                  style: const TextStyle(
-                                      fontFamily: 'Popins',
-                                      fontSize: 40,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                                Text('Campaigns',style: TextStyle(color: Colors.white))
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                AnimatedNumberText(
-                                  _.globals.value,
-                                  curve: Curves.easeIn,
-                                  duration: const Duration(milliseconds: 1900),
-                                  style: const TextStyle(
-                                      fontFamily: 'Popins',
-                                      fontSize: 40,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                                Text('Global Precence',style: TextStyle(color: Colors.white))
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                AnimatedNumberText(
-                                  _.happys.value,
-                                  curve: Curves.easeIn,
-                                  duration: const Duration(milliseconds: 800),
-                                  style: const TextStyle(
-                                      fontFamily: 'Popins',
-                                      fontSize: 40,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                                Text('Happy Customers',style: TextStyle(color: Colors.white))
-                              ],
-                            )
-                          ],
-                        )),
+                    child: Obx(() => Responsive.isMobileContext(context)
+                        ? Column(
+                            children: [
+                              Column(
+                                children: [
+                                  AnimatedNumberText(
+                                    _.clients.value,
+                                    curve: Curves.easeIn,
+                                    duration:
+                                        const Duration(milliseconds: 1000),
+                                    style: const TextStyle(
+                                        fontFamily: 'Popins',
+                                        fontSize: 40,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  const Text(
+                                    'Satisfied Clients',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                              SizedBox(height: 20,),
+                              Column(
+                                children: [
+                                  AnimatedNumberText(
+                                    _.campaigns.value,
+                                    curve: Curves.easeIn,
+                                    duration:
+                                        const Duration(milliseconds: 1500),
+                                    style: const TextStyle(
+                                        fontFamily: 'Popins',
+                                        fontSize: 40,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  Text('Campaigns',
+                                      style: TextStyle(color: Colors.white))
+                                ],
+                              ),
+                              SizedBox(height: 20,),
+
+                              Column(
+                                children: [
+                                  AnimatedNumberText(
+                                    _.globals.value,
+                                    curve: Curves.easeIn,
+                                    duration:
+                                        const Duration(milliseconds: 1900),
+                                    style: const TextStyle(
+                                        fontFamily: 'Popins',
+                                        fontSize: 40,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  Text('Global Precence',
+                                      style: TextStyle(color: Colors.white))
+                                ],
+                              ),
+                              SizedBox(height: 20,),
+
+                              Column(
+                                children: [
+                                  AnimatedNumberText(
+                                    _.happys.value,
+                                    curve: Curves.easeIn,
+                                    duration: const Duration(milliseconds: 800),
+                                    style: const TextStyle(
+                                        fontFamily: 'Popins',
+                                        fontSize: 40,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  Text('Happy Customers',
+                                      style: TextStyle(color: Colors.white))
+                                ],
+                              )
+                            ],
+                          )
+                        : Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Column(
+                                children: [
+                                  AnimatedNumberText(
+                                    _.clients.value,
+                                    curve: Curves.easeIn,
+                                    duration:
+                                        const Duration(milliseconds: 1000),
+                                    style: const TextStyle(
+                                        fontFamily: 'Popins',
+                                        fontSize: 40,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  const Text(
+                                    'Satisfied Clients',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  AnimatedNumberText(
+                                    _.campaigns.value,
+                                    curve: Curves.easeIn,
+                                    duration:
+                                        const Duration(milliseconds: 1500),
+                                    style: const TextStyle(
+                                        fontFamily: 'Popins',
+                                        fontSize: 40,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  Text('Campaigns',
+                                      style: TextStyle(color: Colors.white))
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  AnimatedNumberText(
+                                    _.globals.value,
+                                    curve: Curves.easeIn,
+                                    duration:
+                                        const Duration(milliseconds: 1900),
+                                    style: const TextStyle(
+                                        fontFamily: 'Popins',
+                                        fontSize: 40,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  Text('Global Precence',
+                                      style: TextStyle(color: Colors.white))
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  AnimatedNumberText(
+                                    _.happys.value,
+                                    curve: Curves.easeIn,
+                                    duration: const Duration(milliseconds: 800),
+                                    style: const TextStyle(
+                                        fontFamily: 'Popins',
+                                        fontSize: 40,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  Text('Happy Customers',
+                                      style: TextStyle(color: Colors.white))
+                                ],
+                              )
+                            ],
+                          )),
                   ).marginSymmetric(
                     vertical: 50,
                   ),
@@ -192,7 +284,8 @@ class AboutUs extends StatelessWidget {
                     width: Get.width,
                   ),
                 ],
-              ).marginSymmetric(horizontal: 130),
+              ).marginSymmetric(
+                  horizontal: !Responsive.isDesktopContext(context) ? 50 : 130),
               FooterWidget()
             ],
           ),

@@ -29,7 +29,7 @@ class PortfolioScreen extends StatelessWidget {
                 ),
                 SafeArea(
                   minimum:
-                      EdgeInsets.fromLTRB(Get.width / 5, 0, Get.width / 5, 0),
+                      EdgeInsets.fromLTRB(Get.width / 9, 0, Get.width / 5, 0),
                   child: Column(
                     children: [
                       SizedBox(height: Get.height / 20),
@@ -210,8 +210,8 @@ class PortfolioScreen extends StatelessWidget {
                                         SizedBox(
                                           height: Get.height / 69,
                                         ),
-                                        Text(
-                                            "Car Booth is one the leading & largest online retail in Pakistan, offering e-commerce marketplace for Car Accessories, Modification, Decoration Parts, Gadgets, Body Conversions & Mobile Accessories. Headquartered in Lahore."),
+                                        // Text(
+                                        //     "Car Booth is one the leading. Headquartered in Lahore."),
                                         SizedBox(
                                           height: Get.height / 69,
                                         ),

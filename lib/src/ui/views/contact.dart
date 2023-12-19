@@ -4,7 +4,10 @@ import 'package:quickmarket/src/controllers/contactUsController.dart';
 import 'package:quickmarket/src/ui/widgets/footerWidget.dart';
 import 'package:quickmarket/src/utils/config/commonscafold.dart';
 // import 'package:flutter_map/flutter_map.dart';
-
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong2/latlong.dart';
+import 'package:quickmarket/src/utils/config/responsive.dart';
+import 'package:quickmarket/src/utils/config/widgetresponsive.dart';
 
 class ContactUs extends StatelessWidget {
   final ConatctUsController _ = Get.find<ConatctUsController>();
@@ -24,92 +27,201 @@ class ContactUs extends StatelessWidget {
             ),
             Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      // alignment: Alignment.center,
-                      height: 220,
-                      width: Get.width / 4,
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 88, 75, 230),
-                          borderRadius: BorderRadius.circular(6)),
-                      child: Column(
+                Responsive.isMobileContext(context)
+                    ? Column(
                         children: [
-                          SizedBox(
-                            height: Get.height * 0.05,
+                          Container(
+                            // alignment: Alignment.center,
+                            height: 220,
+                            width: Get.width ,
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 88, 75, 230),
+                                borderRadius: BorderRadius.circular(6)),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: Get.height * 0.05,
+                                ),
+                                Image.asset(
+                                  'images/ContactUs/placeholder.png',
+                                  height: 70,
+                                  width: 70,
+                                ).marginOnly(bottom: 10),
+                                Text(
+                                  'I.T. Tower Gulberg III,\n Lahore, Pakistan',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'Popins',
+                                      fontSize:
+                                          Responsive.isDesktopContext(context)
+                                              ? 20
+                                              : 16),
+                                )
+                              ],
+                            ),
                           ),
-                          Image.asset(
-                            'images/ContactUs/placeholder.png',
-                            height: 70,
-                            width: 70,
+                          SizedBox(height: 20,),
+                          Container(
+                            // alignment: Alignment.center,
+                            height: 220,
+                            width: Get.width ,
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 88, 75, 230),
+                                borderRadius: BorderRadius.circular(6)),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: Get.height * 0.05,
+                                ),
+                                Image.asset(
+                                  'images/ContactUs/phone-call.png',
+                                  height: 70,
+                                  width: 70,
+                                ).marginOnly(bottom: 10),
+                                Text(
+                                  '601 D, Eden Towers, Main \n Boulevard Gulberg, Lahore',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'Popins',
+                                      fontSize:
+                                          Responsive.isDesktopContext(context)
+                                              ? 20
+                                              : 16),
+                                )
+                              ],
+                            ),
                           ),
-                          Text(
-                            '601 D, Eden Towers, Main \n Boulevard Gulberg, Lahore',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Popins',
-                                fontSize: 20),
+                          SizedBox(height: 20,),
+
+                          Container(
+                            // alignment: Alignment.center,
+                            height: 220,
+                            width: Get.width,
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 88, 75, 230),
+                                borderRadius: BorderRadius.circular(6)),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: Get.height * 0.05,
+                                ),
+                                Image.asset(
+                                  'images/ContactUs/message.png',
+                                  height: 70,
+                                  width: 70,
+                                ).marginOnly(bottom: 10),
+                                Text(
+                                  '601 D, Eden Towers, Main \n Boulevard Gulberg, Lahore',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'Popins',
+                                      fontSize:
+                                          Responsive.isDesktopContext(context)
+                                              ? 20
+                                              : 16),
+                                )
+                              ],
+                            ),
                           )
                         ],
-                      ),
-                    ),
-                    Container(
-                      // alignment: Alignment.center,
-                      height: 220,
-                      width: Get.width / 4,
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 88, 75, 230),
-                          borderRadius: BorderRadius.circular(6)),
-                      child: Column(
+                      ).marginOnly(top: 50)
+                    : Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SizedBox(
-                            height: Get.height * 0.05,
+                          Container(
+                            // alignment: Alignment.center,
+                            height: 220,
+                            width: Get.width / 4,
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 88, 75, 230),
+                                borderRadius: BorderRadius.circular(6)),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: Get.height * 0.05,
+                                ),
+                                Image.asset(
+                                  'images/ContactUs/placeholder.png',
+                                  height: 70,
+                                  width: 70,
+                                ).marginOnly(bottom: 10),
+                                Text(
+                                  'I.T. Tower Gulberg III,\n Lahore, Pakistan',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'Popins',
+                                      fontSize:
+                                          Responsive.isDesktopContext(context)
+                                              ? 20
+                                              : 16),
+                                )
+                              ],
+                            ),
                           ),
-                          Image.asset(
-                            'images/ContactUs/placeholder.png',
-                            height: 70,
-                            width: 70,
+                          Container(
+                            // alignment: Alignment.center,
+                            height: 220,
+                            width: Get.width / 4,
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 88, 75, 230),
+                                borderRadius: BorderRadius.circular(6)),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: Get.height * 0.05,
+                                ),
+                                Image.asset(
+                                  'images/ContactUs/phone-call.png',
+                                  height: 70,
+                                  width: 70,
+                                ).marginOnly(bottom: 10),
+                                Text(
+                                  '601 D, Eden Towers, Main \n Boulevard Gulberg, Lahore',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'Popins',
+                                      fontSize:
+                                          Responsive.isDesktopContext(context)
+                                              ? 20
+                                              : 16),
+                                )
+                              ],
+                            ),
                           ),
-                          Text(
-                            '601 D, Eden Towers, Main \n Boulevard Gulberg, Lahore',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Popins',
-                                fontSize: 20),
+                          Container(
+                            // alignment: Alignment.center,
+                            height: 220,
+                            width: Get.width / 4,
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 88, 75, 230),
+                                borderRadius: BorderRadius.circular(6)),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: Get.height * 0.05,
+                                ),
+                                Image.asset(
+                                  'images/ContactUs/message.png',
+                                  height: 70,
+                                  width: 70,
+                                ).marginOnly(bottom: 10),
+                                Text(
+                                  '601 D, Eden Towers, Main \n Boulevard Gulberg, Lahore',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'Popins',
+                                      fontSize:
+                                          Responsive.isDesktopContext(context)
+                                              ? 20
+                                              : 16),
+                                )
+                              ],
+                            ),
                           )
                         ],
-                      ),
-                    ),
-                    Container(
-                      // alignment: Alignment.center,
-                      height: 220,
-                      width: Get.width / 4,
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 88, 75, 230),
-                          borderRadius: BorderRadius.circular(6)),
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: Get.height * 0.05,
-                          ),
-                          Image.asset(
-                            'images/ContactUs/placeholder.png',
-                            height: 70,
-                            width: 70,
-                          ),
-                          Text(
-                            '601 D, Eden Towers, Main \n Boulevard Gulberg, Lahore',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Popins',
-                                fontSize: 20),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ).marginOnly(top: 30),
+                      ).marginOnly(top: 30),
                 Text(
                   'Feel Free To Connect With Us And Drop Us A \n Message',
                   style: TextStyle(
@@ -118,10 +230,8 @@ class ContactUs extends StatelessWidget {
                       fontFamily: 'Popins'),
                   textAlign: TextAlign.center,
                 ).marginSymmetric(vertical: 50),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
+
+                ResponsiveTextFieldRow(firstTextField: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -136,11 +246,10 @@ class ContactUs extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.w500),
                         )
                       ],
-                    ),
-                    Container(
+                    ),secondTextField:  Container(
                       padding: EdgeInsets.all(20),
                       height: 400,
-                      width: Get.width / 2.5,
+                      width: Responsive.isMobileContext(context)?Get.width:Get.width / 2.5,
                       decoration: BoxDecoration(
                           color: Color.fromARGB(104, 206, 206, 206),
                           borderRadius: BorderRadius.circular(10)),
@@ -153,8 +262,9 @@ class ContactUs extends StatelessWidget {
                               filled: true,
                               hintText: 'Full Name',
                               border: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Colors.blue, width: 2.0),
+                                borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 255, 255, 255),
+                                    width: 2.0),
                                 borderRadius: BorderRadius.circular(4.0),
                               ),
                               // contentPadding: EdgeInsets.all(0)
@@ -202,43 +312,68 @@ class ContactUs extends StatelessWidget {
                           ),
                         ],
                       ),
-                    )
-                  ],
-                ).marginOnly(bottom: 50),
+                    ), ).marginOnly(bottom: 50)
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                   
+                   
+                //   ],
+                // ).marginOnly(bottom: 50),
               ],
-            ).marginSymmetric(horizontal: 130),
+            ).marginSymmetric(
+                horizontal: Responsive.isDesktopContext(context) ? 130 : 50),
             Container(
               height: 450,
-              width: Get.width,
-              color: Colors.black,
-        //       child: FlutterMap(
-        //   options: MapOptions(
-        //     center: _.center.value,
-        //     zoom: _.zoom,
-        //     onTap: (point) {
-        //       _.updateMapPosition(point);
-        //     },
-        //   ),
-        //   layers: [
-        //     TileLayerOptions(
-        //       urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        //       subdomains: ['a', 'b', 'c'],
-        //     ),
-        //     MarkerLayerOptions(
-        //       markers: [
-        //         Marker(
-        //           width: 30.0,
-        //           height: 30.0,
-        //           point: _.center.value,
-        //           builder: (ctx) => Container(
-        //             child: FlutterLogo(),
-        //           ),
-        //         ),
-        //       ],
-        //     ),
-        //   ],
-        // ),
-            ),
+              width: Get.width / 1.5,
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
+              // color: Colors.black,
+              child: InkWell(
+                onTap: () {},
+                child: FlutterMap(
+                  options: MapOptions(
+                    initialCenter: LatLng(31.515874, 74.341077),
+                    initialZoom: 17.0,
+                    // onTap: (LatLng point) {
+                    //   _.currentPosition.value = point;
+                    // },
+                  ),
+                  children: [
+                    TileLayer(
+                      urlTemplate:
+                          'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                      subdomains: ['a', 'b', 'c'],
+                    ),
+                    MarkerLayer(
+                      markers: const [
+                        Marker(
+                          point: LatLng(31.515874, 74.341077),
+                          child: Icon(
+                            Icons.location_on,
+                            color: Color.fromARGB(255, 186, 12, 0),
+                            size: 45,
+                          ),
+                        ),
+                      ],
+                    ),
+                    // MarkerLayerOptions(
+                    //   markers: [
+                    //     Marker(
+                    //       width: 30.0,
+                    //       height: 30.0,
+                    //       point: mapController.currentPosition.value,
+                    //       builder: (BuildContext ctx) => Icon(
+                    //         Icons.location_pin,
+                    //         color: Colors.red,
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
+                  ],
+                ),
+              ),
+            ).marginOnly(bottom: 50),
             FooterWidget()
           ],
         ),
