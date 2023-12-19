@@ -12,4 +12,5 @@ class UIDataColors {
   static final textColor = Color.fromARGB(255, 155, 155, 155);
   static final cardColor = Color.fromARGB(255, 253, 121, 97);
   static final card2Color = Color.fromARGB(255, 253, 78, 104);
+  static final hoverColor = Color.fromARGB(249, 81, 72, 182);
 }

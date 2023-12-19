@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:quickmarket/src/utils/config/responsive.dart';
+import 'package:quickmarket/src/utils/config/uidata.dart';
 import 'package:quickmarket/src/utils/routes/app_routes.dart';
 import 'package:get/get.dart';
-import 'package:quickmarket/src/ui/widgets/hoverWidget.dart';
-import 'package:quickmarket/src/utils/config/uidata.dart';
-
 
 class AppBarController extends GetxController {
   RxBool isHovered = false.obs;
@@ -19,6 +18,7 @@ class CommonScafold extends StatelessWidget {
   final appbaar;
   RxBool isHovered = false.obs;
   var check = false;
+  RxBool mobileservicetap = false.obs;
 
   CommonScafold(
       {super.key,
@@ -45,13 +45,15 @@ class CommonScafold extends StatelessWidget {
         ],
       );
 
-  Widget appbar = Container(
+  Widget appbar(context) => Container(
       width: 650,
       height: 100,
       child: GetBuilder<AppBarController>(
           init: AppBarController(),
           builder: (_) {
-            return Row(
+            return
+                // !Responsive.isTabletContext(context)
+                Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -133,9 +135,9 @@ class CommonScafold extends StatelessWidget {
                         height: Get.height,
                         alignment: Alignment.topCenter,
                         child: InkWell(
-                            onTap: () {
-                          Get.toNamed(Routes.plans);
-                        },
+                          onTap: () {
+                            Get.toNamed(Routes.plans);
+                          },
                           child: Text('Plans',
                               style: TextStyle(
                                   fontSize: 17,
@@ -202,18 +204,19 @@ class CommonScafold extends StatelessWidget {
                       _.check.value = '';
                     },
                     child: Obx(() => InkWell(
-                      onTap: () {
-                        Get.toNamed(Routes.contactUs);
-                      },
-                      child: Text('Contact Us',
-                          style: TextStyle(
-                              fontSize: 17,
-                              color: _.check.value == 'Contact'
-                                  ? const Color.fromARGB(255, 255, 176, 0)
-                                  : Colors.white)),
-                    ))),
+                          onTap: () {
+                            Get.toNamed(Routes.contactUs);
+                          },
+                          child: Text('Contact Us',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: _.check.value == 'Contact'
+                                      ? const Color.fromARGB(255, 255, 176, 0)
+                                      : Colors.white)),
+                        ))),
               ],
             );
+            // : SizedBox();
           })).marginOnly(left: Get.width / 2.3, top: 35);
 
   @override
@@ -226,56 +229,264 @@ class CommonScafold extends StatelessWidget {
                 preferredSize:
                     Size.fromHeight(_.check.value == 'Services' ? 420.0 : 100),
                 child: MouseRegion(
-                  onExit: (event) {
-                    _.check.value = '';
-                    _.containerHeight.value = 0;
-                  },
-                  child: Stack(
-                    clipBehavior: Clip.none,
-                    children: [
-                      AppBar(
-                        automaticallyImplyLeading: false,
-                        backgroundColor: Color.fromARGB(255, 88, 75, 230),
-                      ),
-                      appbar,
-                      Image.asset(
-                        "images/Artboard-7.png",
-                        fit: BoxFit.contain,
-                      ).marginOnly(left: 180, top: 15),
-                      AnimatedContainer(
-                              duration: Duration(milliseconds: 400),
-                              margin:
-                                  EdgeInsets.only(top: _.containerHeight.value),
-                              width: Get.width,
-                              height: Get.height,
-                              decoration: BoxDecoration(
-                                border: _.check.value == 'Services'
-                                    ? Border(
-                                        top: BorderSide(
-                                          color: Color.fromRGBO(223, 121, 110,
-                                              1), // Color of the bottom border
-                                          width: _.check.value == 'Services'
-                                              ? 15
-                                              : 0, // Width of the top border
-                                        ),
-                                        bottom: BorderSide(
-                                          color: Color.fromARGB(255, 223, 121,
-                                              110), // Color of the bottom border
-                                          width: _.check.value == 'Services'
-                                              ? 15
-                                              : 0, // Width of the bottom border
-                                        ),
-                                      )
-                                    : null,
-                                color: Color.fromARGB(255, 88, 75, 230),
+                    onExit: (event) {
+                      _.check.value = '';
+                      _.containerHeight.value = 0;
+                    },
+                    child: Responsive.isDesktopContext(context)
+                        ? Stack(
+                            clipBehavior: Clip.none,
+                            children: [
+                              AppBar(
+                                automaticallyImplyLeading: false,
+                                backgroundColor:
+                                    Color.fromARGB(255, 88, 75, 230),
                               ),
-                              child: Text('data'))
-                          .marginOnly(top: 100)
-                    ],
-                  ),
-                ),
+                              appbar(context),
+                              Image.asset(
+                                "images/Artboard-7.png",
+                                fit: BoxFit.contain,
+                              ).marginOnly(left: 180, top: 15),
+                            ],
+                          )
+                        : AppBar(
+                            backgroundColor: Color.fromARGB(255, 88, 75, 230),
+                            flexibleSpace: Container(
+                              // width: Get.width,
+                              alignment: Alignment.center,
+                              // color: Colors.green,
+                              child: Image.asset(
+                                'images/Artboard-7.png',
+                                fit: BoxFit.contain,
+                                width: Responsive.isMobileContext(context)
+                                    ? 100
+                                    : 150,
+                              ),
+                            ),
+                          )),
               )
             : null,
+        drawer: Drawer(
+          backgroundColor: Color.fromARGB(250, 55, 45, 170),
+          // backgroundColor: UIDataColors.midBlackColor,
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              ListTile(
+                hoverColor: UIDataColors.hoverColor,
+                title: Text(
+                  "Home",
+                  style: TextStyle(
+                      color: UIDataColors.whiteColor,
+                      fontWeight: FontWeight.w200),
+                ),
+                onTap: () {
+                  Get.toNamed(Routes.homeRoute);
+                },
+              ),
+              ListTile(
+                hoverColor: UIDataColors.hoverColor,
+                trailing: IconButton(
+                  icon: Icon(
+                    Icons.arrow_drop_down,
+                    color: Colors.white,
+                    size: 35,
+                  ),
+                  onPressed: () {
+                    mobileservicetap.toggle();
+                  },
+                ),
+                title: Text(
+                  "Services",
+                  style: TextStyle(
+                      color: UIDataColors.whiteColor,
+                      fontWeight: FontWeight.w200),
+                ),
+                onTap: () {
+                  Get.toNamed(Routes.services);
+                },
+              ),
+              mobileservicetap.value
+                  ? Container(
+                      color: Color.fromARGB(99, 223, 223, 223),
+                      height: 350,
+                      child: ListView(children: [
+                        ListTile(
+                          hoverColor: UIDataColors.hoverColor,
+                          leading: Image.asset(
+                            'images/services/hover/social-media.png',
+                            height: 35,
+                          ),
+                          title: Text(
+                            "Digital Marketing",
+                            style: TextStyle(
+                                color: UIDataColors.whiteColor,
+                                fontWeight: FontWeight.w200),
+                          ),
+                          onTap: () {
+                            Get.toNamed(Routes.marketing);
+                          },
+                        ),
+                        ListTile(
+                          hoverColor: UIDataColors.hoverColor,
+                          leading: Image.asset(
+                            'images/services/hover/illustration.png',
+                            height: 35,
+                          ),
+                          title: Text(
+                            "Graphic Designing",
+                            style: TextStyle(
+                                color: UIDataColors.whiteColor,
+                                fontWeight: FontWeight.w200),
+                          ),
+                          onTap: () {
+                            Get.toNamed(Routes.graphicdesign);
+                          },
+                        ),
+                        ListTile(
+                          hoverColor: UIDataColors.hoverColor,
+                          leading: Image.asset(
+                            'images/services/hover/montage.png',
+                            height: 35,
+                          ),
+                          title: Text(
+                            "Video Editing",
+                            style: TextStyle(
+                                color: UIDataColors.whiteColor,
+                                fontWeight: FontWeight.w200),
+                          ),
+                          onTap: () {
+                            Get.toNamed(Routes.videoediting);
+                          },
+                        ),
+                        ListTile(
+                          hoverColor: UIDataColors.hoverColor,
+                          leading: Image.asset(
+                            'images/services/hover/develop.png',
+                            height: 35,
+                          ),
+                          title: Text(
+                            "App Development",
+                            style: TextStyle(
+                                color: UIDataColors.whiteColor,
+                                fontWeight: FontWeight.w200),
+                          ),
+                          onTap: () {
+                            Get.toNamed(Routes.appdevelopment);
+                          },
+                        ),
+                        ListTile(
+                          hoverColor: UIDataColors.hoverColor,
+                          leading: Image.asset(
+                            'images/services/hover/web-design_889072.png',
+                            height: 35,
+                          ),
+                          title: Text(
+                            "Web Development",
+                            style: TextStyle(
+                                color: UIDataColors.whiteColor,
+                                fontWeight: FontWeight.w200),
+                          ),
+                          onTap: () {
+                            Get.toNamed(Routes.webdevelopment);
+                          },
+                        ),
+                        ListTile(
+                          hoverColor: UIDataColors.hoverColor,
+                          leading: Image.asset(
+                            'images/services/hover/technical-support.png',
+                            height: 35,
+                          ),
+                          title: Text(
+                            "Seo Services",
+                            style: TextStyle(
+                                color: UIDataColors.whiteColor,
+                                fontWeight: FontWeight.w200),
+                          ),
+                          onTap: () {
+                            Get.toNamed(Routes.seoservice);
+                          },
+                        ),
+                        ListTile(
+                          hoverColor: UIDataColors.hoverColor,
+                          leading: Image.asset(
+                            'images/services/hover/sm.png',
+                            height: 35,
+                          ),
+                          title: Text(
+                            "Social Media",
+                            style: TextStyle(
+                                color: UIDataColors.whiteColor,
+                                fontWeight: FontWeight.w200),
+                          ),
+                          onTap: () {
+                            Get.toNamed(Routes.socialmediamarketing);
+                          },
+                        ),
+                      ]),
+                    )
+                  : SizedBox(),
+              ListTile(
+                hoverColor: UIDataColors.hoverColor,
+                title: Text(
+                  "Plans",
+                  style: TextStyle(
+                      color: UIDataColors.whiteColor,
+                      fontWeight: FontWeight.w200),
+                ),
+                onTap: () {
+                  Get.toNamed(Routes.plans);
+                },
+              ),
+              ListTile(
+                hoverColor: UIDataColors.hoverColor,
+                title: Text(
+                  "Portfolio",
+                  style: TextStyle(
+                      color: UIDataColors.whiteColor,
+                      fontWeight: FontWeight.w200),
+                ),
+                onTap: () {
+                  Get.toNamed(Routes.portfolio);
+                },
+              ),
+              ListTile(
+                hoverColor: UIDataColors.hoverColor,
+                title: Text(
+                  "About Us",
+                  style: TextStyle(
+                      color: UIDataColors.whiteColor,
+                      fontWeight: FontWeight.w200),
+                ),
+                onTap: () {
+                  Get.toNamed(Routes.aboutUs);
+                },
+              ),
+              ListTile(
+                hoverColor: UIDataColors.hoverColor,
+                title: Text(
+                  "Blogs",
+                  style: TextStyle(
+                      color: UIDataColors.whiteColor,
+                      fontWeight: FontWeight.w200),
+                ),
+                onTap: () {},
+              ),
+              ListTile(
+                hoverColor: UIDataColors.hoverColor,
+                title: Text(
+                  "Contact Us",
+                  style: TextStyle(
+                      color: UIDataColors.whiteColor,
+                      fontWeight: FontWeight.w200),
+                ),
+                onTap: () {
+                  Get.toNamed(Routes.contactUs);
+                },
+              ),
+            ],
+          ),
+        ),
         body: body,
         bottomNavigationBar: bottomNav ? myBottomNav() : SizedBox(),
       ),
