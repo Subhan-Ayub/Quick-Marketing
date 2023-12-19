@@ -706,7 +706,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children:  [
+                                      children:const  [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -715,7 +715,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: const [
+                                          children:  [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -2966,9 +2966,72 @@ class PlanScreen extends StatelessWidget {
                       children: [
                         Image.asset("images/portfolioAssets/pricing-img-1.png"),
                         Container(
+                          padding: EdgeInsets.all(25),
+                          decoration: BoxDecoration(
                           color: Color.fromARGB(255, 247, 247, 247),
+                            borderRadius: BorderRadius.circular(10)
+                          ),
                           width: Get.height / 1.5,
                           height: Get.height / 2.2,
+                          child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextField(
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Full Name',
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 255, 255, 255),
+                                    width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Email',
+                              border: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.blue, width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Subject',
+                              border: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.blue, width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                          TextField(
+                            maxLines: 5,
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Message',
+                              border: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.blue, width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                        ],
+                      ),
                         ),
                         Image.asset("images/portfolioAssets/pricing-img-2.png"),
                       ],
