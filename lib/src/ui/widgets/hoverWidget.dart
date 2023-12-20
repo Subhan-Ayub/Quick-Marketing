@@ -10,7 +10,7 @@ class HoverWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-        return Obx(
+    return Obx(
       () => (hov.tryy.value
           ? MouseRegion(
               onEnter: (event) {
@@ -22,6 +22,7 @@ class HoverWidget extends StatelessWidget {
               child: AnimatedContainer(
                 duration: Duration(milliseconds: 400),
                 width: Get.width,
+                margin: EdgeInsets.only(top: hov.containerHeight.value),
                 height: Get.height / 2.5,
                 decoration: BoxDecoration(
                   border: Border(
@@ -38,211 +39,210 @@ class HoverWidget extends StatelessWidget {
                   ),
                   color: Color.fromARGB(255, 88, 75, 230),
                 ),
-                child: Container(
-                  width: Get.width,
-                  alignment: Alignment.center,
-                  child: GridView.count(
-                    crossAxisCount: 5,
-                    childAspectRatio: 1.5,
-                    crossAxisSpacing: 150,
-                    mainAxisSpacing: 50,
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Get.toNamed(Routes.marketing);
-                        },
-                        child: Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SizedBox(
-                                child: Image.asset(
-                                  'images/services/hover/social-media.png',
-                                  // width: 60,
-                                  height: 60,
-                                ),
+                child: Column(
+                  children: [
+                    Container(
+                      width: Get.width,
+                      alignment: Alignment.center,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              Get.toNamed(Routes.marketing);
+                            },
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(
+                                    child: Image.asset(
+                                      'images/services/hover/social-media.png',
+                                      height: 60,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Digital Marketing',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: UIDataColors.whiteColor,
+                                        decoration: TextDecoration.none),
+                                  ).paddingOnly(top: 20)
+                                ],
                               ),
-                              Text(
-                                'Digital Marketing',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: UIDataColors.whiteColor,
-                                    decoration: TextDecoration.none),
-                              )
-                            ],
+                            ),
                           ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Get.toNamed(Routes.graphicdesign);
-                        },
-                        child: Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SizedBox(
-                                child: Image.asset(
-                                  'images/services/hover/illustration.png',
-                                  // width: 60,
-                                  height: 60,
-                                ),
+                          InkWell(
+                            onTap: () {
+                              Get.toNamed(Routes.graphicdesign);
+                            },
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(
+                                    child: Image.asset(
+                                      'images/services/hover/illustration.png',
+                                      height: 60,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Graphic Designing',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: UIDataColors.whiteColor,
+                                        decoration: TextDecoration.none),
+                                  ).paddingOnly(top: 20)
+                                ],
                               ),
-                              Text(
-                                'Graphic Designing',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: UIDataColors.whiteColor,
-                                    decoration: TextDecoration.none),
-                              )
-                            ],
+                            ),
                           ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Get.toNamed(Routes.videoediting);
-                        },
-                        child: Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SizedBox(
-                                child: Image.asset(
-                                  'images/services/hover/montage.png',
-                                  // width: 60,
-                                  height: 60,
-                                ),
+                          InkWell(
+                            onTap: () {
+                              Get.toNamed(Routes.videoediting);
+                            },
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(
+                                    child: Image.asset(
+                                      'images/services/hover/montage.png',
+                                      height: 60,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Video Editing',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: UIDataColors.whiteColor,
+                                        decoration: TextDecoration.none),
+                                  ).paddingOnly(top: 20)
+                                ],
                               ),
-                              Text(
-                                'Video Editing',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: UIDataColors.whiteColor,
-                                    decoration: TextDecoration.none),
-                              )
-                            ],
+                            ),
                           ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Get.toNamed(Routes.appdevelopment);
-                        },
-                        child: Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SizedBox(
-                                child: Image.asset(
-                                  'images/services/hover/develop.png',
-                                  // width: 60,
-                                  height: 60,
-                                ),
+                          InkWell(
+                            onTap: () {
+                              Get.toNamed(Routes.appdevelopment);
+                            },
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(
+                                    child: Image.asset(
+                                      'images/services/hover/develop.png',
+                                      height: 60,
+                                    ),
+                                  ),
+                                  Text(
+                                    'App Development',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: UIDataColors.whiteColor,
+                                        decoration: TextDecoration.none),
+                                  ).paddingOnly(top: 20)
+                                ],
                               ),
-                              Text(
-                                'App Development',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: UIDataColors.whiteColor,
-                                    decoration: TextDecoration.none),
-                              )
-                            ],
+                            ),
                           ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Get.toNamed(Routes.webdevelopment);
-                        },
-                        child: Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SizedBox(
-                                child: Image.asset(
-                                  'images/services/hover/web-design_889072.png',
-                                  // width: 60,
-                                  height: 60,
-                                ),
+                          InkWell(
+                            onTap: () {
+                              Get.toNamed(Routes.webdevelopment);
+                            },
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(
+                                    child: Image.asset(
+                                      'images/services/hover/web-design_889072.png',
+                                      height: 60,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Web Development',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: UIDataColors.whiteColor,
+                                        decoration: TextDecoration.none),
+                                  ).paddingOnly(top: 20)
+                                ],
                               ),
-                              Text(
-                                'Web Development',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: UIDataColors.whiteColor,
-                                    decoration: TextDecoration.none),
-                              )
-                            ],
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                      InkWell(
-                        onTap: () {
-                          Get.toNamed(Routes.seoservice);
-                        },
-                        child: Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SizedBox(
-                                child: Image.asset(
-                                  'images/services/hover/technical-support.png',
-                                  // width: 60,
-                                  height: 60,
-                                ),
+                    ).marginSymmetric(horizontal: 70, vertical: 30),
+                    Container(
+                      width: Get.width,
+                      alignment: Alignment.center,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              Get.toNamed(Routes.seoservice);
+                            },
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(
+                                    child: Image.asset(
+                                      'images/services/hover/technical-support.png',
+                                      height: 60,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Seo Services',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: UIDataColors.whiteColor,
+                                        decoration: TextDecoration.none),
+                                  ).paddingOnly(top: 20)
+                                ],
                               ),
-                              Text(
-                                'Seo Services',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: UIDataColors.whiteColor,
-                                    decoration: TextDecoration.none),
-                              )
-                            ],
+                            ),
                           ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Get.toNamed(Routes.socialmediamarketing);
-                        },
-                        child: Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SizedBox(
-                                child: Image.asset(
-                                  'images/services/hover/sm.png',
-                                  // width: 60,
-                                  height: 60,
-                                ),
+                          InkWell(
+                            onTap: () {
+                              Get.toNamed(Routes.socialmediamarketing);
+                            },
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(
+                                    child: Image.asset(
+                                      'images/services/hover/sm.png',
+                                      height: 60,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Social Media',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: UIDataColors.whiteColor,
+                                        decoration: TextDecoration.none),
+                                  ).paddingOnly(top: 20)
+                                ],
                               ),
-                              Text(
-                                'Social Media',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: UIDataColors.whiteColor,
-                                    decoration: TextDecoration.none),
-                              )
-                            ],
+                            ),
                           ),
-                        ),
+                          SizedBox(),
+                          SizedBox(),
+                          SizedBox(),
+                          SizedBox(),
+                        ],
                       ),
-                    ],
-                  ),
-                ).marginSymmetric(horizontal: 70, vertical: 30),
+                    ).marginSymmetric(horizontal: 70, vertical: 0),
+                  ],
+                ),
               ),
             )
           : SizedBox()),
     );
   }
 }
-

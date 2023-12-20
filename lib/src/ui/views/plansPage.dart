@@ -24,7 +24,8 @@ class PlanScreen extends StatelessWidget {
               child: Image.asset("images/portfolioAssets/Plans.jpg"),
             ),
             SafeArea(
-              minimum: EdgeInsets.fromLTRB(Get.width / 5, 0, Get.width / 5, 0),
+              minimum:                       EdgeInsets.fromLTRB(Get.width / 9, 0, Get.width / 5, 0),
+
               child: Column(
                 children: [
                   SizedBox(height: Get.height / 20),
@@ -101,9 +102,10 @@ class PlanScreen extends StatelessWidget {
                           // color: Colors.amber,
                           width: Get.width,
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
-                                width: Get.width / 7.65,
+                                width: Get.width / 5,
                                 decoration: BoxDecoration(
                                   color: Color.fromARGB(255, 252, 252, 252),
                                   borderRadius: BorderRadius.circular(12.0),
@@ -146,7 +148,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children:  [
+                                      children: const [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -155,7 +157,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: const [
+                                          children:  [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -251,7 +253,7 @@ class PlanScreen extends StatelessWidget {
                                           size: 17,
                                         ),
                                         SizedBox(width: Get.width * 0.006),
-                                        Text('Campaign Execution'),
+                                        Text('Campaign Execution',overflow: TextOverflow.fade),
                                       ],
                                     ),
                                     SizedBox(height: Get.width * 0.006),
@@ -314,7 +316,7 @@ class PlanScreen extends StatelessWidget {
                                           size: 16,
                                         ),
                                         SizedBox(width: Get.width * 0.006),
-                                        Text(' Tweets'),
+                                        Text(' Tweet'),
                                       ],
                                     ),
                                     SizedBox(height: Get.width * 0.006),
@@ -335,286 +337,7 @@ class PlanScreen extends StatelessWidget {
                                           size: 16,
                                         ),
                                         SizedBox(width: Get.width * 0.006),
-                                        Text(' 1 Hour Photo shoot Per 2 Month'),
-                                      ],
-                                    ),
-                                    SizedBox(height: Get.width * 0.006),
-                                    SafeArea(
-                                        minimum: EdgeInsets.only(
-                                            right: 16, left: 16),
-                                        child: Container(
-                                          color: Colors.black38,
-                                          height: 1,
-                                          width: Get.width,
-                                        )),
-                                    SizedBox(height: Get.width * 0.006),
-                                    Row(
-                                      children: [
-                                        SizedBox(width: Get.height * 0.01),
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          size: 16,
-                                        ),
-                                        SizedBox(width: Get.width * 0.006),
-                                        Text('Competitior Analysis Report'),
-                                      ],
-                                    ),
-                                    SizedBox(height: Get.width * 0.02),
-                                    ElevatedButton(
-                                      onPressed: () {
-                                        // Add your button click logic here
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                        primary: UIDataColors.commonColor,
-                                        padding: EdgeInsets.only(
-                                            top: 23,
-                                            bottom: 23,
-                                            left: 35,
-                                            right: 35),
-                                      ),
-                                      child: Text(
-                                        'Get Now',
-                                        style: TextStyle(
-                                            fontFamily: "Popins", fontSize: 16),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 252, 252, 252),
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: const Color.fromARGB(
-                                              255, 180, 180, 180)
-                                          .withOpacity(0.5),
-                                      spreadRadius: 5,
-                                      blurRadius: 7,
-                                      offset: Offset(0, 3),
-                                    ),
-                                  ],
-                                ),
-                                width: Get.width / 7.65,
-                                height: Get.height / 1.43,
-                                alignment: Alignment.center,
-                                margin: EdgeInsets.all(16.0),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: Get.width,
-                                      height: Get.height / 13,
-                                      color: UIDataColors.blueColor,
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        'Silver',
-                                        // textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 28.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
-                                            fontFamily: "Popins"),
-                                      ),
-                                    ),
-                                    SizedBox(height: Get.height * 0.034),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children:  [
-                                        Text(
-                                          'Rs',
-                                          style: TextStyle(
-                                            fontSize: 10.0,
-                                            color: Colors.black,
-                                          ),
-                                        ),
-                                        Column(
-                                          children: const [
-                                            Text(
-                                              '20000',
-                                              style: TextStyle(
-                                                  fontSize: 29.0,
-                                                  color: Color.fromARGB(
-                                                      176, 0, 0, 0),
-                                                  fontWeight: FontWeight.w900,
-                                                  fontFamily: "Popins",
-                                                  leadingDistribution:
-                                                      TextLeadingDistribution
-                                                          .even),
-                                            ),
-                                            Text(
-                                              'Monthly',
-                                              style: TextStyle(
-                                                fontSize: 16.0,
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: Get.height * 0.034),
-                                    Row(
-                                      children: [
-                                        SizedBox(width: Get.height * 0.01),
-                                        Icon(
-                                          Icons.done_all_outlined,
-                                          size: 17,
-                                        ),
-                                        SizedBox(width: Get.width * 0.006),
-                                        Text('Facebook 8 Posts'),
-                                      ],
-                                    ),
-                                    SizedBox(height: Get.width * 0.006),
-                                    SafeArea(
-                                        minimum: EdgeInsets.only(
-                                            right: 16, left: 16),
-                                        child: Container(
-                                          color: Colors.black38,
-                                          height: 1,
-                                          width: Get.width,
-                                        )),
-                                    SizedBox(height: Get.width * 0.006),
-                                    Row(
-                                      children: [
-                                        SizedBox(width: Get.height * 0.01),
-                                        Icon(
-                                          Icons.done_all_outlined,
-                                          size: 17,
-                                        ),
-                                        SizedBox(width: Get.width * 0.006),
-                                        Text(' Instagram 8 Posts'),
-                                      ],
-                                    ),
-                                    SizedBox(height: Get.width * 0.006),
-                                    SafeArea(
-                                        minimum: EdgeInsets.only(
-                                            right: 16, left: 16),
-                                        child: Container(
-                                          color: Colors.black38,
-                                          height: 1,
-                                          width: Get.width,
-                                        )),
-                                    SizedBox(height: Get.width * 0.006),
-                                    Row(
-                                      children: [
-                                        SizedBox(width: Get.height * 0.01),
-                                        Icon(
-                                          Icons.done_all_outlined,
-                                          size: 17,
-                                        ),
-                                        SizedBox(width: Get.width * 0.006),
-                                        Text('Content Creation'),
-                                      ],
-                                    ),
-                                    SizedBox(height: Get.width * 0.006),
-                                    SafeArea(
-                                        minimum: EdgeInsets.only(
-                                            right: 16, left: 16),
-                                        child: Container(
-                                          color: Colors.black38,
-                                          height: 1,
-                                          width: Get.width,
-                                        )),
-                                    SizedBox(height: Get.width * 0.006),
-                                    Row(
-                                      children: [
-                                        SizedBox(width: Get.height * 0.01),
-                                        Icon(
-                                          Icons.done_all_outlined,
-                                          size: 17,
-                                        ),
-                                        SizedBox(width: Get.width * 0.006),
-                                        Text('Campaign Execution'),
-                                      ],
-                                    ),
-                                    SizedBox(height: Get.width * 0.006),
-                                    SafeArea(
-                                        minimum: EdgeInsets.only(
-                                            right: 16, left: 16),
-                                        child: Container(
-                                          color: Colors.black38,
-                                          height: 1,
-                                          width: Get.width,
-                                        )),
-                                    SizedBox(height: Get.width * 0.006),
-                                    Row(
-                                      children: [
-                                        SizedBox(width: Get.height * 0.01),
-                                        Icon(
-                                          Icons.done_all_outlined,
-                                          size: 17,
-                                        ),
-                                        SizedBox(width: Get.width * 0.006),
-                                        Text(' Graphic Designing'),
-                                      ],
-                                    ),
-                                    SizedBox(height: Get.width * 0.006),
-                                    SafeArea(
-                                        minimum: EdgeInsets.only(
-                                            right: 16, left: 16),
-                                        child: Container(
-                                          color: Colors.black38,
-                                          height: 1,
-                                          width: Get.width,
-                                        )),
-                                    SizedBox(height: Get.width * 0.006),
-                                    Row(
-                                      children: [
-                                        SizedBox(width: Get.height * 0.01),
-                                        Icon(
-                                          Icons.done_all_outlined,
-                                          size: 17,
-                                        ),
-                                        SizedBox(width: Get.width * 0.006),
-                                        Text('Social Media Insight Report'),
-                                      ],
-                                    ),
-                                    SizedBox(height: Get.width * 0.006),
-                                    SafeArea(
-                                        minimum: EdgeInsets.only(
-                                            right: 16, left: 16),
-                                        child: Container(
-                                          color: Colors.black38,
-                                          height: 1,
-                                          width: Get.width,
-                                        )),
-                                    SizedBox(height: Get.width * 0.006),
-                                    Row(
-                                      children: [
-                                        SizedBox(width: Get.height * 0.01),
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          size: 16,
-                                        ),
-                                        SizedBox(width: Get.width * 0.006),
-                                        Text(' Tweets'),
-                                      ],
-                                    ),
-                                    SizedBox(height: Get.width * 0.006),
-                                    SafeArea(
-                                        minimum: EdgeInsets.only(
-                                            right: 16, left: 16),
-                                        child: Container(
-                                          color: Colors.black38,
-                                          height: 1,
-                                          width: Get.width,
-                                        )),
-                                    SizedBox(height: Get.width * 0.006),
-                                    Row(
-                                      children: [
-                                        SizedBox(width: Get.height * 0.01),
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          size: 16,
-                                        ),
-                                        SizedBox(width: Get.width * 0.006),
-                                        Text(' 1 Hour Photo shoot Per 2 Month'),
+                                        Text(' 1 Hour Photo shoot Per 2 Month',overflow: TextOverflow.ellipsis),
                                       ],
                                     ),
                                     SizedBox(height: Get.width * 0.006),
@@ -660,6 +383,285 @@ class PlanScreen extends StatelessWidget {
                                   ],
                                 ),
                               ),
+                              // Container(
+                              //   decoration: BoxDecoration(
+                              //     color: Color.fromARGB(255, 252, 252, 252),
+                              //     borderRadius: BorderRadius.circular(12.0),
+                              //     boxShadow: [
+                              //       BoxShadow(
+                              //         color: const Color.fromARGB(
+                              //                 255, 180, 180, 180)
+                              //             .withOpacity(0.5),
+                              //         spreadRadius: 5,
+                              //         blurRadius: 7,
+                              //         offset: Offset(0, 3),
+                              //       ),
+                              //     ],
+                              //   ),
+                              //   width: Get.width / 7.65,
+                              //   height: Get.height / 1.43,
+                              //   alignment: Alignment.center,
+                              //   margin: EdgeInsets.all(16.0),
+                              //   child: Column(
+                              //     mainAxisAlignment: MainAxisAlignment.start,
+                              //     crossAxisAlignment: CrossAxisAlignment.center,
+                              //     children: [
+                              //       Container(
+                              //         width: Get.width,
+                              //         height: Get.height / 13,
+                              //         color: UIDataColors.blueColor,
+                              //         alignment: Alignment.center,
+                              //         child: Text(
+                              //           'Silver',
+                              //           // textAlign: TextAlign.center,
+                              //           style: TextStyle(
+                              //               fontSize: 28.0,
+                              //               fontWeight: FontWeight.bold,
+                              //               color: Colors.white,
+                              //               fontFamily: "Popins"),
+                              //         ),
+                              //       ),
+                              //       SizedBox(height: Get.height * 0.034),
+                              //       Row(
+                              //         crossAxisAlignment:
+                              //             CrossAxisAlignment.start,
+                              //         mainAxisAlignment:
+                              //             MainAxisAlignment.center,
+                              //         children: const [
+                              //           Text(
+                              //             'Rs',
+                              //             style: TextStyle(
+                              //               fontSize: 10.0,
+                              //               color: Colors.black,
+                              //             ),
+                              //           ),
+                              //           Column(
+                              //             children:  [
+                              //               Text(
+                              //                 '20000',
+                              //                 style: TextStyle(
+                              //                     fontSize: 29.0,
+                              //                     color: Color.fromARGB(
+                              //                         176, 0, 0, 0),
+                              //                     fontWeight: FontWeight.w900,
+                              //                     fontFamily: "Popins",
+                              //                     leadingDistribution:
+                              //                         TextLeadingDistribution
+                              //                             .even),
+                              //               ),
+                              //               Text(
+                              //                 'Monthly',
+                              //                 style: TextStyle(
+                              //                   fontSize: 16.0,
+                              //                   color: Colors.black,
+                              //                 ),
+                              //               ),
+                              //             ],
+                              //           ),
+                              //         ],
+                              //       ),
+                              //       SizedBox(height: Get.height * 0.034),
+                              //       Row(
+                              //         children: [
+                              //           SizedBox(width: Get.height * 0.01),
+                              //           Icon(
+                              //             Icons.done_all_outlined,
+                              //             size: 17,
+                              //           ),
+                              //           SizedBox(width: Get.width * 0.006),
+                              //           Text('Facebook 8 Posts'),
+                              //         ],
+                              //       ),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       SafeArea(
+                              //           minimum: EdgeInsets.only(
+                              //               right: 16, left: 16),
+                              //           child: Container(
+                              //             color: Colors.black38,
+                              //             height: 1,
+                              //             width: Get.width,
+                              //           )),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       Row(
+                              //         children: [
+                              //           SizedBox(width: Get.height * 0.01),
+                              //           Icon(
+                              //             Icons.done_all_outlined,
+                              //             size: 17,
+                              //           ),
+                              //           SizedBox(width: Get.width * 0.006),
+                              //           Text(' Instagram 8 Posts'),
+                              //         ],
+                              //       ),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       SafeArea(
+                              //           minimum: EdgeInsets.only(
+                              //               right: 16, left: 16),
+                              //           child: Container(
+                              //             color: Colors.black38,
+                              //             height: 1,
+                              //             width: Get.width,
+                              //           )),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       Row(
+                              //         children: [
+                              //           SizedBox(width: Get.height * 0.01),
+                              //           Icon(
+                              //             Icons.done_all_outlined,
+                              //             size: 17,
+                              //           ),
+                              //           SizedBox(width: Get.width * 0.006),
+                              //           Text('Content Creation'),
+                              //         ],
+                              //       ),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       SafeArea(
+                              //           minimum: EdgeInsets.only(
+                              //               right: 16, left: 16),
+                              //           child: Container(
+                              //             color: Colors.black38,
+                              //             height: 1,
+                              //             width: Get.width,
+                              //           )),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       Row(
+                              //         children: [
+                              //           SizedBox(width: Get.height * 0.01),
+                              //           Icon(
+                              //             Icons.done_all_outlined,
+                              //             size: 17,
+                              //           ),
+                              //           SizedBox(width: Get.width * 0.006),
+                              //           Text('Campaign Execution'),
+                              //         ],
+                              //       ),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       SafeArea(
+                              //           minimum: EdgeInsets.only(
+                              //               right: 16, left: 16),
+                              //           child: Container(
+                              //             color: Colors.black38,
+                              //             height: 1,
+                              //             width: Get.width,
+                              //           )),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       Row(
+                              //         children: [
+                              //           SizedBox(width: Get.height * 0.01),
+                              //           Icon(
+                              //             Icons.done_all_outlined,
+                              //             size: 17,
+                              //           ),
+                              //           SizedBox(width: Get.width * 0.006),
+                              //           Text(' Graphic Designing'),
+                              //         ],
+                              //       ),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       SafeArea(
+                              //           minimum: EdgeInsets.only(
+                              //               right: 16, left: 16),
+                              //           child: Container(
+                              //             color: Colors.black38,
+                              //             height: 1,
+                              //             width: Get.width,
+                              //           )),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       Row(
+                              //         children: [
+                              //           SizedBox(width: Get.height * 0.01),
+                              //           Icon(
+                              //             Icons.done_all_outlined,
+                              //             size: 17,
+                              //           ),
+                              //           SizedBox(width: Get.width * 0.006),
+                              //           Text('Social Media Insight Report'),
+                              //         ],
+                              //       ),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       SafeArea(
+                              //           minimum: EdgeInsets.only(
+                              //               right: 16, left: 16),
+                              //           child: Container(
+                              //             color: Colors.black38,
+                              //             height: 1,
+                              //             width: Get.width,
+                              //           )),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       Row(
+                              //         children: [
+                              //           SizedBox(width: Get.height * 0.01),
+                              //           Icon(
+                              //             Icons.cancel_outlined,
+                              //             size: 16,
+                              //           ),
+                              //           SizedBox(width: Get.width * 0.006),
+                              //           Text(' Tweets'),
+                              //         ],
+                              //       ),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       SafeArea(
+                              //           minimum: EdgeInsets.only(
+                              //               right: 16, left: 16),
+                              //           child: Container(
+                              //             color: Colors.black38,
+                              //             height: 1,
+                              //             width: Get.width,
+                              //           )),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       Row(
+                              //         children: [
+                              //           SizedBox(width: Get.height * 0.01),
+                              //           Icon(
+                              //             Icons.cancel_outlined,
+                              //             size: 16,
+                              //           ),
+                              //           SizedBox(width: Get.width * 0.006),
+                              //           Text(' 1 Hour Photo shoot Per 2 Month'),
+                              //         ],
+                              //       ),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       SafeArea(
+                              //           minimum: EdgeInsets.only(
+                              //               right: 16, left: 16),
+                              //           child: Container(
+                              //             color: Colors.black38,
+                              //             height: 1,
+                              //             width: Get.width,
+                              //           )),
+                              //       SizedBox(height: Get.width * 0.006),
+                              //       Row(
+                              //         children: [
+                              //           SizedBox(width: Get.height * 0.01),
+                              //           Icon(
+                              //             Icons.cancel_outlined,
+                              //             size: 16,
+                              //           ),
+                              //           SizedBox(width: Get.width * 0.006),
+                              //           Text('Competitior Analysis Report'),
+                              //         ],
+                              //       ),
+                              //       SizedBox(height: Get.width * 0.02),
+                              //       ElevatedButton(
+                              //         onPressed: () {
+                              //           // Add your button click logic here
+                              //         },
+                              //         style: ElevatedButton.styleFrom(
+                              //           primary: UIDataColors.commonColor,
+                              //           padding: EdgeInsets.only(
+                              //               top: 23,
+                              //               bottom: 23,
+                              //               left: 35,
+                              //               right: 35),
+                              //         ),
+                              //         child: Text(
+                              //           'Get Now',
+                              //           style: TextStyle(
+                              //               fontFamily: "Popins", fontSize: 16),
+                              //         ),
+                              //       ),
+                              //     ],
+                              //   ),
+                              // ),
                               Container(
                                 decoration: BoxDecoration(
                                   color: Color.fromARGB(255, 252, 252, 252),
@@ -675,7 +677,7 @@ class PlanScreen extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                width: Get.width / 7.65,
+                                width: Get.width / 5,
                                 height: Get.height / 1.43,
                                 alignment: Alignment.center,
                                 margin: EdgeInsets.all(16.0),
@@ -704,7 +706,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children:  [
+                                      children:const  [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -713,7 +715,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: const [
+                                          children:  [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -954,7 +956,7 @@ class PlanScreen extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                width: Get.width / 7.65,
+                                width: Get.width / 5,
                                 height: Get.height / 1.43,
                                 alignment: Alignment.center,
                                 margin: EdgeInsets.all(16.0),
@@ -983,7 +985,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children:  [
+                                      children:const  [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -992,7 +994,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: const [
+                                          children:  [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -1227,6 +1229,7 @@ class PlanScreen extends StatelessWidget {
                           // color: Colors.amber,
                           width: Get.width,
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
                                 width: Get.width / 5.6,
@@ -2075,6 +2078,7 @@ class PlanScreen extends StatelessWidget {
                           // color: Colors.amber,
                           width: Get.width,
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
                                 width: Get.width / 5.6,
@@ -2120,7 +2124,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: [
+                                      children:const [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -2129,7 +2133,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: const [
+                                          children:  [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -2399,7 +2403,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: [
+                                      children:const [
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -2408,7 +2412,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children: const [
+                                          children:  [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -2678,7 +2682,7 @@ class PlanScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: [
+                                      children: const[
                                         Text(
                                           'Rs',
                                           style: TextStyle(
@@ -2687,7 +2691,7 @@ class PlanScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Column(
-                                          children:const [
+                                          children: [
                                             Text(
                                               '20000',
                                               style: TextStyle(
@@ -2962,9 +2966,72 @@ class PlanScreen extends StatelessWidget {
                       children: [
                         Image.asset("images/portfolioAssets/pricing-img-1.png"),
                         Container(
+                          padding: EdgeInsets.all(25),
+                          decoration: BoxDecoration(
                           color: Color.fromARGB(255, 247, 247, 247),
+                            borderRadius: BorderRadius.circular(10)
+                          ),
                           width: Get.height / 1.5,
                           height: Get.height / 2.2,
+                          child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextField(
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Full Name',
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 255, 255, 255),
+                                    width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Email',
+                              border: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.blue, width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Subject',
+                              border: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.blue, width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                          TextField(
+                            maxLines: 5,
+                            decoration: InputDecoration(
+                              fillColor: Color.fromARGB(128, 255, 255, 255),
+                              filled: true,
+                              hintText: 'Message',
+                              border: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.blue, width: 2.0),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              // contentPadding: EdgeInsets.all(0)
+                            ),
+                          ),
+                        ],
+                      ),
                         ),
                         Image.asset("images/portfolioAssets/pricing-img-2.png"),
                       ],
