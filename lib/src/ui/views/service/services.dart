@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:flutter/material.dart';
 import 'package:quickmarket/src/controllers/servicesController.dart';
 import 'package:quickmarket/src/ui/widgets/footerWidget.dart';

@@ -203,6 +203,7 @@ class GraphicDesign extends StatelessWidget {
                       .paddingOnly(
                           top: 50,
                           bottom: Responsive.isMobileContext(context) ? 30 : 0),
+               
                   SizedBox(
                     child: Text('Comprehensive Design Services',
                         style: TextStyle(
