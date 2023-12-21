@@ -118,6 +118,7 @@ class AboutUs extends StatelessWidget {
                       },
                     ),
                   ).marginOnly(top: 20),
+                  
                   Container(
                     width: Responsive.isMobileContext(context)?Get.width:null,
                     decoration: BoxDecoration(

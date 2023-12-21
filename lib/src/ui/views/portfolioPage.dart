@@ -564,6 +564,7 @@ class PortfolioScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
+                      
                       SizedBox(height: Get.height * 0.02),
                       CarouselSlider(
                         options: CarouselOptions(

@@ -5,6 +5,10 @@ import 'package:get/get.dart';
 class HomeController extends GetxController with GetTickerProviderStateMixin {
   final RxDouble containerWidth = 0.0.obs;
 
+  RxBool web = false.obs;
+  RxBool social = false.obs;
+  RxBool photography = false.obs;
+
   late AnimationController anime1;
   late AnimationController anime2;
   late AnimationController anime3;
@@ -14,7 +18,7 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
   late Animation<Offset> offsetAnimation2;
   late Animation<Offset> offsetAnimation3;
   late Animation<Offset> offsetAnimation4;
-  
+
   late Animation<Offset> offsetAnime;
 
   @override
@@ -64,7 +68,6 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
     anime2.reset();
     anime2.forward();
 
-
     anime3 = AnimationController(
       duration: Duration(milliseconds: 3850),
       vsync: this,
@@ -86,7 +89,6 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
 
     anime3.reset();
     anime3.forward();
-
 
     anime4 = AnimationController(
       duration: Duration(milliseconds: 3850),
