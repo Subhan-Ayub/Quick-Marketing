@@ -1,5 +1,6 @@
 import 'package:quickmarket/src/bindings/about_bindings.dart';
 import 'package:quickmarket/src/bindings/contactUs_bindings.dart';
+import 'package:quickmarket/src/bindings/plans_bindings.dart';
 import 'package:quickmarket/src/bindings/portfolioBinding.dart';
 import 'package:quickmarket/src/ui/views/aboutUs.dart';
 import 'package:quickmarket/src/ui/views/contact.dart';
@@ -15,7 +16,6 @@ import 'package:get/get.dart';
 // bindings
 import 'package:quickmarket/src/bindings/home_bindings.dart';
 import 'package:quickmarket/src/bindings/servicesBinding.dart';
-
 
 // routes
 import '../../ui/views/plansPage.dart';
@@ -60,12 +60,11 @@ class AppPages {
         binding: PortfolioBindings(),
         page: () => PortfolioScreen(),
         transition: Transition.noTransition),
-           GetPage(
-      name: Routes.plans,
-      binding: PortfolioBindings(),
-      page: () => PlanScreen(),
-      transition: Transition.noTransition
-    ),
+    GetPage(
+        name: Routes.plans,
+        binding: PlansBindings(),
+        page: () => PlanScreen(),
+        transition: Transition.noTransition),
     GetPage(
         name: Routes.appdevelopment,
         binding: ServicesBindings(),
@@ -91,7 +90,7 @@ class AppPages {
         binding: ServicesBindings(),
         page: () => VideoEditing(),
         transition: Transition.noTransition),
-         GetPage(
+    GetPage(
         name: Routes.contactUs,
         binding: ContactUsBindings(),
         page: () => ContactUs(),
