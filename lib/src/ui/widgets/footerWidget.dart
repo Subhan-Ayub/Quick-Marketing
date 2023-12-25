@@ -14,7 +14,7 @@ class FooterWidget extends StatelessWidget {
         Container(
             width: Get.width,
             // height: Get.height / 2,
-            color: Color.fromARGB(255, 88, 75, 230),
+            color: UIDataColors.commonColor,
             child: FooterResponsive(
                 first: Container(
                   width: !Responsive.isMobileContext(context)
@@ -26,8 +26,9 @@ class FooterWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset(
-                        "images/Artboard-7.png",
+                        "images/QIM-White-Text.png",
                         fit: BoxFit.contain,
+                        height: 100,
                       ),
                       Text('We aspire to take our clients to the maximal class of Marvel Nationally & Internationally by strengthening their vision with the most auspicious scenarios, best campaign ideas, and most compelling solutions.',
                               style: TextStyle(

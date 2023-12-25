@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:animated_text_lerp/animated_text_lerp.dart';
 import 'package:quickmarket/src/ui/widgets/footerWidget.dart';
 import 'package:quickmarket/src/utils/config/responsive.dart';
+import 'package:quickmarket/src/utils/config/uidata.dart';
 
 import '../../controllers/aboutController.dart';
 import '../../utils/config/commonscafold.dart';
@@ -122,7 +123,7 @@ class AboutUs extends StatelessWidget {
                   Container(
                     width: Responsive.isMobileContext(context)?Get.width:null,
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 88, 75, 230),
+                        color: UIDataColors.commonColor,
                         borderRadius: BorderRadius.circular(20)),
                     padding: EdgeInsets.all(20),
                     child: Obx(() => Responsive.isMobileContext(context)

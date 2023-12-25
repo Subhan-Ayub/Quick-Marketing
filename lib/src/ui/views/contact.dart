@@ -8,6 +8,7 @@ import 'package:quickmarket/src/utils/config/commonscafold.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:quickmarket/src/utils/config/responsive.dart';
+import 'package:quickmarket/src/utils/config/uidata.dart';
 import 'package:quickmarket/src/utils/config/widgetresponsive.dart';
 
 class ContactUs extends StatelessWidget {
@@ -102,7 +103,7 @@ class ContactUs extends StatelessWidget {
                                 height: 220,
                                 width: Get.width,
                                 decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 88, 75, 230),
+                                    color:UIDataColors.commonColor,
                                     borderRadius: BorderRadius.circular(6)),
                                 child: Column(
                                   children: [
@@ -137,7 +138,7 @@ class ContactUs extends StatelessWidget {
                                 height: 220,
                                 width: Get.width / 4,
                                 decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 88, 75, 230),
+                                    color: UIDataColors.commonColor,
                                     borderRadius: BorderRadius.circular(6)),
                                 child: Column(
                                   children: [
@@ -168,7 +169,7 @@ class ContactUs extends StatelessWidget {
                                 height: 220,
                                 width: Get.width / 4,
                                 decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 88, 75, 230),
+                                    color: UIDataColors.commonColor,
                                     borderRadius: BorderRadius.circular(6)),
                                 child: Column(
                                   children: [
@@ -198,7 +199,7 @@ class ContactUs extends StatelessWidget {
                                 height: 220,
                                 width: Get.width / 4,
                                 decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 88, 75, 230),
+                                    color:UIDataColors.commonColor,
                                     borderRadius: BorderRadius.circular(6)),
                                 child: Column(
                                   children: [

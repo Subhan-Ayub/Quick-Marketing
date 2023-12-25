@@ -286,6 +286,7 @@ class PlanScreen extends StatelessWidget {
                                                             child: Text(
                                                               'Get Now',
                                                               style: TextStyle(
+                                                                color: Colors.white,
                                                                   fontFamily:
                                                                       "Popins",
                                                                   fontSize: 16),
@@ -478,6 +479,8 @@ class PlanScreen extends StatelessWidget {
                                                               style: TextStyle(
                                                                   fontFamily:
                                                                       "Popins",
+                                                                color: Colors.white,
+
                                                                   fontSize: 16),
                                                             ),
                                                           ).marginSymmetric(
@@ -666,6 +669,8 @@ class PlanScreen extends StatelessWidget {
                                                             child: Text(
                                                               'Get Now',
                                                               style: TextStyle(
+                                                                color: Colors.white,
+
                                                                   fontFamily:
                                                                       "Popins",
                                                                   fontSize: 16),
@@ -922,6 +927,8 @@ class PlanScreen extends StatelessWidget {
                                                           child: Text(
                                                             'Get Now',
                                                             style: TextStyle(
+                                                                color: Colors.white,
+
                                                                 fontFamily:
                                                                     "Popins",
                                                                 fontSize: 16),
@@ -1110,6 +1117,8 @@ class PlanScreen extends StatelessWidget {
                                                           child: Text(
                                                             'Get Now',
                                                             style: TextStyle(
+                                                                color: Colors.white,
+
                                                                 fontFamily:
                                                                     "Popins",
                                                                 fontSize: 16),
@@ -1298,6 +1307,8 @@ class PlanScreen extends StatelessWidget {
                                                           child: Text(
                                                             'Get Now',
                                                             style: TextStyle(
+                                                                color: Colors.white,
+
                                                                 fontFamily:
                                                                     "Popins",
                                                                 fontSize: 16),
@@ -1553,6 +1564,8 @@ class PlanScreen extends StatelessWidget {
                                                           child: Text(
                                                             'Get Now',
                                                             style: TextStyle(
+                                                                color: Colors.white,
+
                                                                 fontFamily:
                                                                     "Popins",
                                                                 fontSize: 16),
@@ -1741,6 +1754,8 @@ class PlanScreen extends StatelessWidget {
                                                           child: Text(
                                                             'Get Now',
                                                             style: TextStyle(
+                                                                color: Colors.white,
+
                                                                 fontFamily:
                                                                     "Popins",
                                                                 fontSize: 16),
@@ -1784,8 +1799,7 @@ class PlanScreen extends StatelessWidget {
                                                         Container(
                                                           width: Get.width,
                                                           height: Get.height / 13,
-                                                          color: UIDataColors
-                                                              .blueColor,
+                                                          color: UIDataColors.commonColor,
                                                           alignment:
                                                               Alignment.center,
                                                           child: Text(
@@ -1929,6 +1943,8 @@ class PlanScreen extends StatelessWidget {
                                                           child: Text(
                                                             'Get Now',
                                                             style: TextStyle(
+                                                                color: Colors.white,
+
                                                                 fontFamily:
                                                                     "Popins",
                                                                 fontSize: 16),
@@ -2046,7 +2062,7 @@ class PlanScreen extends StatelessWidget {
                                           Container(
                                             width: Get.width,
                                             height: Get.height / 13,
-                                            color: UIDataColors.blueColor,
+                                            color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
                                               'Startup',
@@ -2157,8 +2173,11 @@ class PlanScreen extends StatelessWidget {
                                                   right: 35),
                                             ),
                                             child: Text(
+
                                               'Get Now',
                                               style: TextStyle(
+                                                                color: Colors.white,
+
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
@@ -2196,7 +2215,7 @@ class PlanScreen extends StatelessWidget {
                                           Container(
                                             width: Get.width,
                                             height: Get.height / 13,
-                                            color: UIDataColors.blueColor,
+                                            color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
                                               'Startup',
@@ -2309,6 +2328,8 @@ class PlanScreen extends StatelessWidget {
                                             child: Text(
                                               'Get Now',
                                               style: TextStyle(
+                                                                color: Colors.white,
+
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
@@ -2346,7 +2367,7 @@ class PlanScreen extends StatelessWidget {
                                           Container(
                                             width: Get.width,
                                             height: Get.height / 13,
-                                            color: UIDataColors.blueColor,
+                                            color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
                                               'Startup',
@@ -2459,6 +2480,8 @@ class PlanScreen extends StatelessWidget {
                                             child: Text(
                                               'Get Now',
                                               style: TextStyle(
+                                                                color: Colors.white,
+
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
@@ -2508,7 +2531,7 @@ class PlanScreen extends StatelessWidget {
                                           Container(
                                             width: Get.width,
                                             height: Get.height / 13,
-                                            color: UIDataColors.blueColor,
+                                            color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
                                               'Startup',
@@ -2621,6 +2644,8 @@ class PlanScreen extends StatelessWidget {
                                             child: Text(
                                               'Get Now',
                                               style: TextStyle(
+                                                                color: Colors.white,
+
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
@@ -2658,7 +2683,7 @@ class PlanScreen extends StatelessWidget {
                                           Container(
                                             width: Get.width,
                                             height: Get.height / 13,
-                                            color: UIDataColors.blueColor,
+                                            color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
                                               'Startup',
@@ -2771,6 +2796,8 @@ class PlanScreen extends StatelessWidget {
                                             child: Text(
                                               'Get Now',
                                               style: TextStyle(
+                                                                color: Colors.white,
+
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
@@ -2808,7 +2835,7 @@ class PlanScreen extends StatelessWidget {
                                           Container(
                                             width: Get.width,
                                             height: Get.height / 13,
-                                            color: UIDataColors.blueColor,
+                                            color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
                                               'Startup',
@@ -2921,6 +2948,8 @@ class PlanScreen extends StatelessWidget {
                                             child: Text(
                                               'Get Now',
                                               style: TextStyle(
+                                                                color: Colors.white,
+
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
@@ -2971,7 +3000,7 @@ class PlanScreen extends StatelessWidget {
                                           Container(
                                             width: Get.width,
                                             height: Get.height / 13,
-                                            color: UIDataColors.blueColor,
+                                            color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
                                               'Startup',
@@ -3084,6 +3113,8 @@ class PlanScreen extends StatelessWidget {
                                             child: Text(
                                               'Get Now',
                                               style: TextStyle(
+                                                                color: Colors.white,
+
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
@@ -3121,7 +3152,7 @@ class PlanScreen extends StatelessWidget {
                                           Container(
                                             width: Get.width,
                                             height: Get.height / 13,
-                                            color: UIDataColors.blueColor,
+                                            color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
                                               'Startup',
@@ -3234,6 +3265,8 @@ class PlanScreen extends StatelessWidget {
                                             child: Text(
                                               'Get Now',
                                               style: TextStyle(
+                                                                color: Colors.white,
+
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
@@ -3271,7 +3304,7 @@ class PlanScreen extends StatelessWidget {
                                           Container(
                                             width: Get.width,
                                             height: Get.height / 13,
-                                            color: UIDataColors.blueColor,
+                                            color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
                                               'Startup',
@@ -3384,6 +3417,8 @@ class PlanScreen extends StatelessWidget {
                                             child: Text(
                                               'Get Now',
                                               style: TextStyle(
+                                                                color: Colors.white,
+
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),

@@ -22,8 +22,8 @@ class HoverWidget extends StatelessWidget {
               child: AnimatedContainer(
                 duration: Duration(milliseconds: 400),
                 width: Get.width,
-                margin: EdgeInsets.only(top: hov.containerHeight.value),
-                height: Get.height / 2.5,
+                // margin: EdgeInsets.only(top: hov.containerHeight.value),
+                // height: Get.height / 2.5,
                 decoration: BoxDecoration(
                   border: Border(
                     top: BorderSide(

@@ -240,13 +240,26 @@ class CommonScafold extends StatelessWidget {
                               AppBar(
                                 automaticallyImplyLeading: false,
                                 backgroundColor:
-                                    Color.fromARGB(255, 88, 75, 230),
+                                    Color.fromARGB(255, 28, 19, 127),
+                                flexibleSpace: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors:const [ Color.fromARGB(255, 95, 15, 64),  Color.fromARGB(255, 66, 37, 114)],
+                                      // Optional: Add stops for more control over the gradient distribution
+                                      // stops: [0.0, 1.0],
+                                    ),
+                                  ),
+                                ),
                               ),
                               appbar(context),
                               Image.asset(
-                                "images/Artboard-7.png",
+                                "images/QIM-White-Text.png",
+                                height: 300,
+                                // width: 300,
                                 fit: BoxFit.contain,
-                              ).marginOnly(left: 180, top: 15),
+                              ).marginOnly(left: 180, top: 0),
                             ],
                           )
                         : AppBar(
@@ -256,11 +269,11 @@ class CommonScafold extends StatelessWidget {
                               alignment: Alignment.center,
                               // color: Colors.green,
                               child: Image.asset(
-                                'images/Artboard-7.png',
+                                'images/QIM-White-Text.png',
                                 fit: BoxFit.contain,
                                 width: Responsive.isMobileContext(context)
-                                    ? 100
-                                    : 150,
+                                    ? 300
+                                    : 350,
                               ),
                             ),
                           )),
