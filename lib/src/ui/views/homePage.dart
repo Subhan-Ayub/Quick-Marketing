@@ -31,201 +31,396 @@ class HomeScreen extends StatelessWidget {
             color: UIDataColors.whiteColor,
             child: Column(
               children: [
-                CarouselSlider(
-                  options: CarouselOptions(
-                    height: Get.height / 1.33,
-                    // enlargeCenterPage: true,
-                    autoPlay: true,
-                    autoPlayInterval: Duration(milliseconds: 3500),
-                    autoPlayAnimationDuration: Duration(milliseconds: 1100),
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    pauseAutoPlayOnTouch: true,
-                    // aspectRatio: 1,
-                    viewportFraction: 1.0,
+                // CarouselSlider(
+                //   options: CarouselOptions(
+                //     height: Get.height / 1.33,
+                //     // enlargeCenterPage: true,
+                //     autoPlay: true,
+                //     autoPlayInterval: Duration(milliseconds: 3500),
+                //     autoPlayAnimationDuration: Duration(milliseconds: 1100),
+                //     autoPlayCurve: Curves.fastOutSlowIn,
+                //     pauseAutoPlayOnTouch: true,
+                //     // aspectRatio: 1,
+                //     viewportFraction: 1.0,
+                //   ),
+                //   items: [
+                //     Container(
+                //       width: Get.width,
+                //       height: Get.height / 1.2,
+                //       alignment: Alignment.centerLeft,
+                //       decoration: BoxDecoration(
+                //         // borderRadius: BorderRadius.circular(8.0),
+                //         image: DecorationImage(
+                //           // alignment: Alignment.centerRight,
+                //           image: AssetImage(
+                //             "images/home/1.jpg",
+                //           ),
+                //           fit: BoxFit.cover,
+                //         ),
+                //       ),
+                //       child: SlideTransition(
+                //         // transformHitTests: false,
+                //         position: _.offsetAnimation1,
+                //         child: Column(
+                //           crossAxisAlignment: CrossAxisAlignment.start,
+                //           children: [
+                //             Text(
+                //               "Trio Tec Digital",
+                //               style: TextStyle(
+                //                   color: Colors.white,
+                //                   decoration: TextDecoration.none,
+                //                   fontSize: !Responsive.isMobileContext(context)
+                //                       ? Responsive.isTabletContext(context)
+                //                           ? 20
+                //                           : 38
+                //                       : 10,
+                //                   fontFamily: 'Popins',
+                //                   letterSpacing: 1.5,
+                //                   fontWeight: FontWeight.bold),
+                //             ),
+                //             Text(
+                //               "Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.",
+                //               style: TextStyle(
+                //                   decoration: TextDecoration.none,
+                //                   fontFamily: 'Popins',
+                //                   color: UIDataColors.whiteColor,
+                //                   fontSize: !Responsive.isMobileContext(context)
+                //                       ? Responsive.isTabletContext(context)
+                //                           ? 12
+                //                           : 17
+                //                       : 8,
+                //                   wordSpacing: 1.5,
+                //                   letterSpacing: 1),
+                //             ).marginSymmetric(vertical: 20),
+                //           ],
+                //         ).paddingSymmetric(horizontal: 50),
+                //       ).marginSymmetric(vertical: 40),
+                //     ),
+                //     Container(
+                //       width: Get.width,
+                //       height: Get.height / 1.2,
+                //       alignment: Alignment.centerLeft,
+                //       decoration: BoxDecoration(
+                //         // borderRadius: BorderRadius.circular(8.0),
+                //         image: DecorationImage(
+                //           // alignment: Alignment.centerRight,
+                //           image: AssetImage(
+                //             "images/home/2.jpg",
+                //           ),
+                //           fit: BoxFit.cover,
+                //         ),
+                //       ),
+                //       child: SlideTransition(
+                //         position: _.offsetAnimation2,
+                //         child: Column(
+                //           crossAxisAlignment: CrossAxisAlignment.start,
+                //           children: [
+                //             Text(
+                //               "Trio Tec Digital",
+                //               style: TextStyle(
+                //                   color: Colors.white,
+                //                   decoration: TextDecoration.none,
+                //                   fontSize: 38,
+                //                   fontFamily: 'Popins',
+                //                   letterSpacing: 1.5,
+                //                   fontWeight: FontWeight.bold),
+                //             ),
+                //             Text(
+                //               "Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.",
+                //               style: TextStyle(
+                //                   decoration: TextDecoration.none,
+                //                   fontFamily: 'Popins',
+                //                   color: UIDataColors.whiteColor,
+                //                   fontSize: 17,
+                //                   wordSpacing: 1.5,
+                //                   letterSpacing: 1),
+                //             ).marginSymmetric(vertical: 20),
+                //           ],
+                //         ).paddingSymmetric(horizontal: 50),
+                //       ).marginSymmetric(vertical: 40),
+                //     ),
+                //     Container(
+                //       width: Get.width,
+                //       height: Get.height / 1.2,
+                //       alignment: Alignment.centerLeft,
+                //       decoration: BoxDecoration(
+                //         // borderRadius: BorderRadius.circular(8.0),
+                //         image: DecorationImage(
+                //           // alignment: Alignment.centerRight,
+                //           image: AssetImage(
+                //             "images/home/3.jpg",
+                //           ),
+                //           fit: BoxFit.cover,
+                //         ),
+                //       ),
+                //       child: SlideTransition(
+                //         position: _.offsetAnimation3,
+                //         child: Column(
+                //           crossAxisAlignment: CrossAxisAlignment.start,
+                //           children: [
+                //             Text(
+                //               "Trio Tec Digital",
+                //               style: TextStyle(
+                //                   color: Colors.white,
+                //                   decoration: TextDecoration.none,
+                //                   fontSize: 38,
+                //                   fontFamily: 'Popins',
+                //                   letterSpacing: 1.5,
+                //                   fontWeight: FontWeight.bold),
+                //             ),
+                //             Text(
+                //               "Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.",
+                //               style: TextStyle(
+                //                   decoration: TextDecoration.none,
+                //                   fontFamily: 'Popins',
+                //                   color: UIDataColors.whiteColor,
+                //                   fontSize: 17,
+                //                   wordSpacing: 1.5,
+                //                   letterSpacing: 1),
+                //             ).marginSymmetric(vertical: 20),
+                //           ],
+                //         ).paddingSymmetric(horizontal: 50),
+                //       ).marginSymmetric(vertical: 40),
+                //     ),
+                //     Container(
+                //       width: Get.width,
+                //       height: Get.height / 1.2,
+                //       alignment: Alignment.centerLeft,
+                //       decoration: BoxDecoration(
+                //         // borderRadius: BorderRadius.circular(8.0),
+                //         image: DecorationImage(
+                //           // alignment: Alignment.centerRight,
+                //           image: AssetImage(
+                //             "images/home/4.jpg",
+                //           ),
+                //           fit: BoxFit.cover,
+                //         ),
+                //       ),
+                //       child: SlideTransition(
+                //         position: _.offsetAnimation4,
+                //         child: Column(
+                //           crossAxisAlignment: CrossAxisAlignment.start,
+                //           children: [
+                //             Text(
+                //               "Trio Tec Digital",
+                //               style: TextStyle(
+                //                   color: Colors.white,
+                //                   decoration: TextDecoration.none,
+                //                   fontSize: 38,
+                //                   fontFamily: 'Popins',
+                //                   letterSpacing: 1.5,
+                //                   fontWeight: FontWeight.bold),
+                //             ),
+                //             Text(
+                //               "Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.",
+                //               style: TextStyle(
+                //                   decoration: TextDecoration.none,
+                //                   fontFamily: 'Popins',
+                //                   color: UIDataColors.whiteColor,
+                //                   fontSize: 17,
+                //                   wordSpacing: 1.5,
+                //                   letterSpacing: 1),
+                //             ).marginSymmetric(vertical: 20),
+                //           ],
+                //         ).paddingSymmetric(horizontal: 50),
+                //       ).marginSymmetric(vertical: 40),
+                //     ),
+                //   ],
+
+                // ),
+
+                Container(
+                  width: Get.width,
+                  height: Get.height / 1.2,
+                  alignment: Alignment.centerLeft,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('images/home/bb.png'),
+                          fit: BoxFit.cover)
+                      // gradient: LinearGradient(
+                      //   begin: Alignment.topLeft,
+                      //   end: Alignment.bottomRight,
+                      //   colors: [UIDataColors.commonColor, UIDataColors.purColor],
+                      // ),
+                      ),
+                  child: CarouselSlider(
+                    options: CarouselOptions(
+                      height: Get.height / 1.33,
+                      // enlargeCenterPage: true,
+                      autoPlay: true,
+                      autoPlayInterval: Duration(seconds: 3),
+                      autoPlayAnimationDuration: Duration(milliseconds: 1100),
+                      autoPlayCurve: Curves.fastOutSlowIn,
+                      pauseAutoPlayOnTouch: true,
+                      aspectRatio: 1,
+                      viewportFraction: 1.0,
+                    ),
+                    items: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          SlideTransition(
+                            position: _.offsetAnimation1,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Trio Tec Digital",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      decoration: TextDecoration.none,
+                                      fontSize: 38,
+                                      fontFamily: 'Popins',
+                                      letterSpacing: 1.5,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  'Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.',
+                                  style: TextStyle(
+                                      decoration: TextDecoration.none,
+                                      fontFamily: 'Popins',
+                                      color: UIDataColors.whiteColor,
+                                      fontSize: 17,
+                                      height: 1.5,
+                                      wordSpacing: 1.5,
+                                      letterSpacing: 1),
+                                ).marginSymmetric(vertical: 20),
+                              ],
+                            ).paddingSymmetric(horizontal: 0, vertical: 40),
+                          ),
+                          Container(
+                            // width: 500,
+                            height: 600,
+                            // color: Colors.black,
+                            child: Image.asset('images/home/tr.png'),
+                          )
+                        ],
+                      ),
+                      //
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          SlideTransition(
+                            position: _.offsetAnimation1,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Trio Tec Digital",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      decoration: TextDecoration.none,
+                                      fontSize: 38,
+                                      fontFamily: 'Popins',
+                                      letterSpacing: 1.5,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  'Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.',
+                                  style: TextStyle(
+                                      decoration: TextDecoration.none,
+                                      fontFamily: 'Popins',
+                                      color: UIDataColors.whiteColor,
+                                      fontSize: 17,
+                                      height: 1.5,
+                                      wordSpacing: 1.5,
+                                      letterSpacing: 1),
+                                ).marginSymmetric(vertical: 20),
+                              ],
+                            ).paddingSymmetric(horizontal: 0, vertical: 40),
+                          ),
+                          Container(
+                            // width: 500,
+                            height: 600,
+                            // color: Colors.black,
+                            child: Image.asset('images/home/tr2.png'),
+                          )
+                        ],
+                      ),
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          SlideTransition(
+                            position: _.offsetAnimation1,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Trio Tec Digital",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      decoration: TextDecoration.none,
+                                      fontSize: 38,
+                                      fontFamily: 'Popins',
+                                      letterSpacing: 1.5,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  'Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.',
+                                  style: TextStyle(
+                                      decoration: TextDecoration.none,
+                                      fontFamily: 'Popins',
+                                      color: UIDataColors.whiteColor,
+                                      fontSize: 17,
+                                      height: 1.5,
+                                      wordSpacing: 1.5,
+                                      letterSpacing: 1),
+                                ).marginSymmetric(vertical: 20),
+                              ],
+                            ).paddingSymmetric(horizontal: 0, vertical: 40),
+                          ),
+                          Container(
+                            // width: 500,
+                            height: 600,
+                            // color: Colors.black,
+                            child: Image.asset('images/home/tr3.png'),
+                          )
+                        ],
+                      ),
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          SlideTransition(
+                            position: _.offsetAnimation1,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Trio Tec Digital",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      decoration: TextDecoration.none,
+                                      fontSize: 38,
+                                      fontFamily: 'Popins',
+                                      letterSpacing: 1.5,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  'Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.',
+                                  style: TextStyle(
+                                      decoration: TextDecoration.none,
+                                      fontFamily: 'Popins',
+                                      color: UIDataColors.whiteColor,
+                                      fontSize: 17,
+                                      height: 1.5,
+                                      wordSpacing: 1.5,
+                                      letterSpacing: 1),
+                                ).marginSymmetric(vertical: 20),
+                              ],
+                            ).paddingSymmetric(horizontal: 0, vertical: 40),
+                          ),
+                          Container(
+                            // width: 500,
+                            height: 600,
+                            // color: Colors.black,
+                            child: Image.asset('images/home/tr4.png'),
+                          )
+                        ],
+                      ),
+                    ],
                   ),
-                  items: [
-                    Container(
-                      width: Get.width,
-                      height: Get.height / 1.2,
-                      alignment: Alignment.centerLeft,
-                      decoration: BoxDecoration(
-                        // borderRadius: BorderRadius.circular(8.0),
-                        image: DecorationImage(
-                          // alignment: Alignment.centerRight,
-                          image: AssetImage(
-                            "images/home/1.jpg",
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      child: SlideTransition(
-                        // transformHitTests: false,
-                        position: _.offsetAnimation1,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Trio Tec Digital",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  decoration: TextDecoration.none,
-                                  fontSize: !Responsive.isMobileContext(context)
-                                      ? Responsive.isTabletContext(context)
-                                          ? 20
-                                          : 38
-                                      : 10,
-                                  fontFamily: 'Popins',
-                                  letterSpacing: 1.5,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.",
-                              style: TextStyle(
-                                  decoration: TextDecoration.none,
-                                  fontFamily: 'Popins',
-                                  color: UIDataColors.whiteColor,
-                                  fontSize: !Responsive.isMobileContext(context)
-                                      ? Responsive.isTabletContext(context)
-                                          ? 12
-                                          : 17
-                                      : 8,
-                                  wordSpacing: 1.5,
-                                  letterSpacing: 1),
-                            ).marginSymmetric(vertical: 20),
-                          ],
-                        ).paddingSymmetric(horizontal: 50),
-                      ).marginSymmetric(vertical: 40),
-                    ),
-                    Container(
-                      width: Get.width,
-                      height: Get.height / 1.2,
-                      alignment: Alignment.centerLeft,
-                      decoration: BoxDecoration(
-                        // borderRadius: BorderRadius.circular(8.0),
-                        image: DecorationImage(
-                          // alignment: Alignment.centerRight,
-                          image: AssetImage(
-                            "images/home/2.jpg",
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      child: SlideTransition(
-                        position: _.offsetAnimation2,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Trio Tec Digital",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  decoration: TextDecoration.none,
-                                  fontSize: 38,
-                                  fontFamily: 'Popins',
-                                  letterSpacing: 1.5,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.",
-                              style: TextStyle(
-                                  decoration: TextDecoration.none,
-                                  fontFamily: 'Popins',
-                                  color: UIDataColors.whiteColor,
-                                  fontSize: 17,
-                                  wordSpacing: 1.5,
-                                  letterSpacing: 1),
-                            ).marginSymmetric(vertical: 20),
-                          ],
-                        ).paddingSymmetric(horizontal: 50),
-                      ).marginSymmetric(vertical: 40),
-                    ),
-                    Container(
-                      width: Get.width,
-                      height: Get.height / 1.2,
-                      alignment: Alignment.centerLeft,
-                      decoration: BoxDecoration(
-                        // borderRadius: BorderRadius.circular(8.0),
-                        image: DecorationImage(
-                          // alignment: Alignment.centerRight,
-                          image: AssetImage(
-                            "images/home/3.jpg",
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      child: SlideTransition(
-                        position: _.offsetAnimation3,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Trio Tec Digital",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  decoration: TextDecoration.none,
-                                  fontSize: 38,
-                                  fontFamily: 'Popins',
-                                  letterSpacing: 1.5,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.",
-                              style: TextStyle(
-                                  decoration: TextDecoration.none,
-                                  fontFamily: 'Popins',
-                                  color: UIDataColors.whiteColor,
-                                  fontSize: 17,
-                                  wordSpacing: 1.5,
-                                  letterSpacing: 1),
-                            ).marginSymmetric(vertical: 20),
-                          ],
-                        ).paddingSymmetric(horizontal: 50),
-                      ).marginSymmetric(vertical: 40),
-                    ),
-                    Container(
-                      width: Get.width,
-                      height: Get.height / 1.2,
-                      alignment: Alignment.centerLeft,
-                      decoration: BoxDecoration(
-                        // borderRadius: BorderRadius.circular(8.0),
-                        image: DecorationImage(
-                          // alignment: Alignment.centerRight,
-                          image: AssetImage(
-                            "images/home/4.jpg",
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      child: SlideTransition(
-                        position: _.offsetAnimation4,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Trio Tec Digital",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  decoration: TextDecoration.none,
-                                  fontSize: 38,
-                                  fontFamily: 'Popins',
-                                  letterSpacing: 1.5,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Is all set and furnished to pave your ways \nto the height of excellence by equipping \nyou with the most potent digital resources \nan by reinforcing the loyalty of your \nclients with you.",
-                              style: TextStyle(
-                                  decoration: TextDecoration.none,
-                                  fontFamily: 'Popins',
-                                  color: UIDataColors.whiteColor,
-                                  fontSize: 17,
-                                  wordSpacing: 1.5,
-                                  letterSpacing: 1),
-                            ).marginSymmetric(vertical: 20),
-                          ],
-                        ).paddingSymmetric(horizontal: 50),
-                      ).marginSymmetric(vertical: 40),
-                    ),
-                  ],
                 ),
 
                 // About Us
@@ -345,7 +540,6 @@ class HomeScreen extends StatelessWidget {
                         bottom: Responsive.isMobileContext(context) ? 30 : 0),
 
                 // what we offer
-
                 Container(
                   width: Get.width,
                   decoration: BoxDecoration(
@@ -1802,6 +1996,7 @@ class HomeScreen extends StatelessWidget {
                           // enlargeCenterPage: true,
                           autoPlay: true,
                           autoPlayInterval: Duration(seconds: 4),
+                          aspectRatio: 3,
                           autoPlayAnimationDuration:
                               Duration(milliseconds: 1200),
                           autoPlayCurve: Curves.fastOutSlowIn,
@@ -2714,7 +2909,7 @@ class HomeScreen extends StatelessWidget {
                               Duration(milliseconds: 1200),
                           autoPlayCurve: Curves.fastOutSlowIn,
                           pauseAutoPlayOnTouch: true,
-                          // aspectRatio: 3,
+                          aspectRatio: 1,
                           viewportFraction: !Responsive.isMobileContext(context)
                               ? Responsive.isTabletContext(context)
                                   ? 1
@@ -2991,6 +3186,7 @@ class HomeScreen extends StatelessWidget {
 
                           ///
                         ]).marginSymmetric(horizontal: Get.width * .10),
+
                     //
                   ]),
                 ).paddingSymmetric(vertical: 20),

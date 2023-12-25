@@ -25,15 +25,15 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
   void onInit() {
     super.onInit();
     anime1 = AnimationController(
-      duration: Duration(milliseconds: 3850),
+      duration: Duration(milliseconds: 2699),
       vsync: this,
     );
-    // _controller.addStatusListener((status) {
-    //   if (status == AnimationStatus.completed) {
-    //     _controller.reset();
-    //     _controller.forward();
-    //   }
-    // });
+    anime1.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        // anime1.reset();
+        anime1.forward();
+      }
+    });
 
     offsetAnimation1 = Tween<Offset>(
       begin: const Offset(0.0, 1.0),
