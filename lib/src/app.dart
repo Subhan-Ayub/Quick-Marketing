@@ -45,6 +45,9 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData(),
       // darkTheme: ThemeData.dark(),
       // themeMode: settings.getThemeMode,
+      theme: ThemeData(
+        fontFamily: 'Popins',
+      ),
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       onUnknownRoute: (RouteSettings rs) => MaterialPageRoute(
