@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                         options: CarouselOptions(
                           height: Get.height / 1.33,
                           // enlargeCenterPage: true,
-                          // autoPlay: true,
+                          autoPlay: true,
                           autoPlayInterval: Duration(seconds: 3),
                           autoPlayAnimationDuration:
                               Duration(milliseconds: 1100),
