@@ -1,13 +1,7 @@
+[[plugins]]
+package = "netlify-plugin-flutter"
+   [plugins.inputs]
+    channel = "stable"
 [build]
-  base = "Quick-Marketing"
-  command = "flutter build web"
-  publish = "build/web"
-
-[context.production.environment]
-  FLUTTER_WEB_FLAGS = "--dart-define=FLUTTER_WEB_USE_SKIA=true --dart-define=FLUTTER_WEB_USE_THUMBNAIL=true"
-
-[context.split1]
-  command = "echo 'Deploying to Split 1'"
-
-[context.deploy-preview]
-  command = "echo 'Deploying to Deploy Preview'"
+command = "flutter build web --release"
+publish = "build/web"
