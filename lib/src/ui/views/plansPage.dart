@@ -1956,7 +1956,7 @@ class PlanScreen extends StatelessWidget {
                                       width: Get.width / 30,
                                     ),
                                     Text(
-                                      "Social Media Marketing",
+                                      "Search Engine Optimization",
                                       style: TextStyle(
                                           // color: UIDataColors.secondaryOrangeColor,
                                           fontSize: Get.width * 0.015),
@@ -2141,7 +2141,7 @@ class PlanScreen extends StatelessWidget {
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
-                                          ).marginSymmetric(vertical: 20),
+                                          ).paddingOnly(bottom: 10),
                                         ],
                                       ),
                                     ),
@@ -2178,7 +2178,7 @@ class PlanScreen extends StatelessWidget {
                                             color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              'Startup',
+                                              'Standard',
                                               // textAlign: TextAlign.center,
                                               style: TextStyle(
                                                   fontSize: 28.0,
@@ -2294,7 +2294,7 @@ class PlanScreen extends StatelessWidget {
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
-                                          ).marginSymmetric(vertical: 20),
+                                          ).paddingOnly(bottom: 10),
                                         ],
                                       ),
                                     ),
@@ -2331,7 +2331,7 @@ class PlanScreen extends StatelessWidget {
                                             color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              'Startup',
+                                              'Premium',
                                               // textAlign: TextAlign.center,
                                               style: TextStyle(
                                                   fontSize: 28.0,
@@ -2448,7 +2448,7 @@ class PlanScreen extends StatelessWidget {
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
-                                          ).marginSymmetric(vertical: 20),
+                                          ).paddingOnly(bottom: 10),
                                         ],
                                       ),
                                     ),
@@ -2497,7 +2497,7 @@ class PlanScreen extends StatelessWidget {
                                             color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              'Startup',
+                                              'Basic',
                                               // textAlign: TextAlign.center,
                                               style: TextStyle(
                                                   fontSize: 28.0,
@@ -2523,7 +2523,7 @@ class PlanScreen extends StatelessWidget {
                                               Column(
                                                 children: [
                                                   Text(
-                                                    '20000',
+                                                    '45,000',
                                                     style: TextStyle(
                                                         fontSize: 29.0,
                                                         color: Color.fromARGB(
@@ -2613,7 +2613,7 @@ class PlanScreen extends StatelessWidget {
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
-                                          ).marginSymmetric(vertical: 20),
+                                          ).paddingOnly(bottom: 10),
                                         ],
                                       ),
                                     ),
@@ -2650,7 +2650,7 @@ class PlanScreen extends StatelessWidget {
                                             color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              'Startup',
+                                              'Standard',
                                               // textAlign: TextAlign.center,
                                               style: TextStyle(
                                                   fontSize: 28.0,
@@ -2676,7 +2676,7 @@ class PlanScreen extends StatelessWidget {
                                               Column(
                                                 children: [
                                                   Text(
-                                                    '20000',
+                                                    '75,000',
                                                     style: TextStyle(
                                                         fontSize: 29.0,
                                                         color: Color.fromARGB(
@@ -2767,7 +2767,7 @@ class PlanScreen extends StatelessWidget {
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
-                                          ).marginSymmetric(vertical: 20),
+                                          ).paddingOnly(bottom: 10),
                                         ],
                                       ),
                                     ),
@@ -2804,7 +2804,7 @@ class PlanScreen extends StatelessWidget {
                                             color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              'Startup',
+                                              'Premium',
                                               // textAlign: TextAlign.center,
                                               style: TextStyle(
                                                   fontSize: 28.0,
@@ -2830,7 +2830,7 @@ class PlanScreen extends StatelessWidget {
                                               Column(
                                                 children: [
                                                   Text(
-                                                    '20000',
+                                                    '95,000',
                                                     style: TextStyle(
                                                         fontSize: 29.0,
                                                         color: Color.fromARGB(
@@ -2921,7 +2921,7 @@ class PlanScreen extends StatelessWidget {
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
-                                          ).marginSymmetric(vertical: 20),
+                                          ).paddingOnly(bottom: 10),
                                         ],
                                       ),
                                     ),
@@ -2971,7 +2971,7 @@ class PlanScreen extends StatelessWidget {
                                             color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              'Startup',
+                                              'Basic',
                                               // textAlign: TextAlign.center,
                                               style: TextStyle(
                                                   fontSize: 28.0,
@@ -2997,7 +2997,7 @@ class PlanScreen extends StatelessWidget {
                                               Column(
                                                 children: [
                                                   Text(
-                                                    '20000',
+                                                    '45,000',
                                                     style: TextStyle(
                                                         fontSize: 29.0,
                                                         color: Color.fromARGB(
@@ -3088,7 +3088,7 @@ class PlanScreen extends StatelessWidget {
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
-                                          ).marginSymmetric(vertical: 20),
+                                          ).paddingOnly(bottom: 10),
                                         ],
                                       ),
                                     ),
@@ -3125,7 +3125,7 @@ class PlanScreen extends StatelessWidget {
                                             color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              'Startup',
+                                              'Standard',
                                               // textAlign: TextAlign.center,
                                               style: TextStyle(
                                                   fontSize: 28.0,
@@ -3151,7 +3151,7 @@ class PlanScreen extends StatelessWidget {
                                               Column(
                                                 children: [
                                                   Text(
-                                                    '20000',
+                                                    '85,000',
                                                     style: TextStyle(
                                                         fontSize: 29.0,
                                                         color: Color.fromARGB(
@@ -3242,7 +3242,7 @@ class PlanScreen extends StatelessWidget {
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
-                                          ).marginSymmetric(vertical: 20),
+                                          ).paddingOnly(bottom: 10),
                                         ],
                                       ),
                                     ),
@@ -3279,7 +3279,7 @@ class PlanScreen extends StatelessWidget {
                                             color: UIDataColors.commonColor,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              'Startup',
+                                              'Premium',
                                               // textAlign: TextAlign.center,
                                               style: TextStyle(
                                                   fontSize: 28.0,
@@ -3305,7 +3305,7 @@ class PlanScreen extends StatelessWidget {
                                               Column(
                                                 children: [
                                                   Text(
-                                                    '20000',
+                                                    '120,000',
                                                     style: TextStyle(
                                                         fontSize: 29.0,
                                                         color: Color.fromARGB(
@@ -3396,7 +3396,7 @@ class PlanScreen extends StatelessWidget {
                                                   fontFamily: "Popins",
                                                   fontSize: 16),
                                             ),
-                                          ).marginSymmetric(vertical: 20),
+                                          ).paddingOnly(bottom: 10),
                                         ],
                                       ),
                                     ),
