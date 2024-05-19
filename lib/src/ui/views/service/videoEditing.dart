@@ -388,6 +388,7 @@ class VideoEditing extends StatelessWidget {
                                   ]),
                             ),
                           ))
+                      //fazi rec
                       .paddingOnly(
                           top: 50,
                           bottom:
